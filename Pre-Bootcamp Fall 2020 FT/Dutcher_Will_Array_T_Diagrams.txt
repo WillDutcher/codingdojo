@@ -1,0 +1,29 @@
+****    Code Snippet 1
+
+____________________|____________________
+auntContactInfo     | ["Paula", "Smith", "1234 Main Street", "St. Louis", "MO", 12345]
+                    |
+console.log(auntContactInfo); // ["Paula", "Smith", "1234 Main Street", "St. Louis", "MO", 12345]
+
+
+
+
+****    Code Snippet 2
+
+____________________________|____________________
+produce                     | ["Paula", "Smith", "1234 Main Street", "St. Louis", "MO", 12345]
+frozen                      | ["broccoli", "ice cream"]
+frozen.push("hashbrowns");  | ["broccoli", "ice cream", "hashbrowns"]
+                            |
+console.log(frozen); // ["broccoli", "ice cream", "hashbrowns"]
+
+
+
+****    Code Snippet 3
+
+________________________________|____________________
+movieLibrary                    | ["Bambi", "E.T.", "Toy Story"]
+movieLibrary.push = "Zoro"      | ["Bambi", "E.T.", "Toy Story", "Zoro"]
+movieLibrary[1] = "Beetlejuice" | ["Bambi", "Beetlejuice.", "Toy Story", "Zoro"]
+                                |
+console.log(movieLibrary); // ["Bambi", "Beetlejuice.", "Toy Story", "Zoro"]
