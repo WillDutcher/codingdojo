@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NinjaMan</title>
+        <style type="text/css">
+            /* General Styling */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .row {
+                line-height: 0;
+            }
+
+            /* World Building */
+            .wall {
+                background-color: blue;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+            }
+
+            .blank {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+            }
+            
+            .sushi {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('img/sushi.png');
+                background-size: contain;
+            }
+            
+            .onigiri {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('img/onigiri.png');
+                background-size: contain;
+            }
+            
+            /* Ninjaman */
+            #ninjaman {
+                background-color: black;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('img/ninja.gif');
+                background-size: contain;
+                position: absolute;
+            }
+
+            /* Player Score */
+            #scoreTable {
+                width: 200px;
+                color: red;
+            }
+
+            /* Pumpkin Ghosts */
+            #bluey {
+                background-color: white;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('img/bluey.gif');
+                background-size:contain;
+                /* position: absolute; */
+            }
+
+            #pinky {
+                background-color: white;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('img/pinky.gif');
+                background-size:contain;
+                /* position: absolute; */
+            }
+
+            #pumpky {
+                background-color: white;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('img/pumpky.gif');
+                background-size:contain;
+                /* position: absolute; */
+            }
+
+            #red {
+                background-color: white;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('img/red.gif');
+                background-size:contain;
+                /* position: absolute; */
+            }
+
+            #scaredy {
+                background-color: white;
+                height: 40px;
+                width: 40px;
+                display: inline-block;
+                background-image: url('img/scaredy.png');
+                background-size:contain;
+                /* position: absolute;             */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Placeholder for Ninjaman World -->
+        <div id='world'></div>
+
+        <!-- Placeholder for Ninjaman gif image -->
+        <div id='ninjaman'></div>
+
+        <!-- Placeholder for Player Score -->
+        <div id="scoreTable">
+            <h2 style="text-align: center;">
+                SCORE
+            </h2>
+            <h3 id="score" style="text-align: center;"></h3>
+        </div>
+
+        <!-- Placeholders for Pumpkin Ghosts -->
+        <div id="bluey"></div>
+        <div id="pinky"></div>
+        <div id="pumpky"></div>
+        <div id="red"></div>
+        <div id="scaredy"></div>
+
+        <script type="text/javascript">
+            /* Variable declarations */
+            var sushiPoints = 10;
+            var ongiriPoints = 5;
+            var worldSize = Math.floor(Math.random() * 10 + 8);
+            var worldDict = {
+                0: 'blank',
+                1: 'wall',
+                2: 'sushi',
+                3: 'onigiri'
+            }
+            var ninjaman = {
+                x: 1,
+                y: 1
+            }
+            let playerScore = 0;
+            let world = [];
+
+            function makeRandomWorld() {
+                world.push(makeOuterWall());
+                for (var i = 0; i < worldSize - 2; i++) {
+                    world.push(makeInnerWorld());
+                }
+                world.push(makeOuterWall());
+                console.log(world)
+            }
+
+            function makeOuterWall() {
+                var outerWall = [];
+                for (var i = 0; i < worldSize; i++) {
+                    outerWall.push(1);
+                }
+                return outerWall;
+            }
+
+            function makeInnerWorld() {
+                var innerWorld = [];
+                innerWorld.push(1);
+                for (var i = 0; i < worldSize - 2; i++) {
+                    innerWorld.push(Math.floor(Math.random() * 4))
+                }
+                innerWorld.push(1);
+                return innerWorld;
+            }
+
+            function drawWorld() {
+                output = "";
+
+                for (var row = 0; row < world.length; row++) {
+                    output += "<div class='row'>"
+                    for (var x = 0; x < world[row].length; x++) {
+                        output += "<div class = '" + worldDict[world[row][x]] + "'></div>"
+                    }
+                    output += "</div>"
+                }
+                document.getElementById('world').innerHTML = output;
+            }
+
+            function drawNinjaman() {
+                document.getElementById('ninjaman').style.top = ninjaman.y * 40 + 'px';
+                document.getElementById('ninjaman').style.left = ninjaman.x * 40 + 'px';
+            }
+
+            document.onkeydown = function (e) {
+                if (e.keyCode == 37) { // LEFT
+                    if (world[ninjaman.y][ninjaman.x - 1] != 1) {
+                        ninjaman.x--;
+                    }
+                }
+                if (e.keyCode == 39) { // RIGHT
+                    if (world[ninjaman.y][ninjaman.x + 1] != 1) {
+                        ninjaman.x++;
+                    }
+                }
+                if (e.keyCode == 38) { // UP
+                    if (world[ninjaman.y - 1][ninjaman.x] != 1) {
+                        ninjaman.y--;
+                    }
+                }
+                if (e.keyCode == 40) { // DOWN
+                    if (world[ninjaman.y + 1][ninjaman.x] != 1) {
+                        ninjaman.y++;
+                    }
+                }
+
+                updateScore(world[ninjaman.y][ninjaman.x])
+
+                world[ninjaman.y][ninjaman.x] = 0;
+                drawNinjaman();
+                drawWorld();
+                document.getElementById('score').innerHTML = playerScore;
+            }
+
+            function updateScore(position) {
+                if (position == 2) {
+                    playerScore += 10;
+                }
+                if (position == 3) {
+                    playerScore += 5
+                }
+            }
+
+            /* Draw images to begin game. */
+            makeRandomWorld();
+            drawWorld();
+            drawNinjaman();
+
+            /* If the drawn world will not allow ninjaman to immediately move, reload. */
+            if (world[ninjaman.y][ninjaman.x + 1] == 1 && world[ninjaman.y + 1][ninjaman.x] == 1) {
+                location.reload();
+            }
+
+                // create ghosts that chase ninjaman
+        </script>
+    </body>
+    
+</html>
