@@ -81,29 +81,39 @@
 
         function moveEnemies() {
             for (var i=0; i<enemies.length; i++) {
-                enemies[i].top = enemies[i].top + 2;
+                enemies[i].top = enemies[i].top + .25;
+                if (enemies[i].top >= 620) {
+                    enemies.shift();
+                    console.log(enemies);
+                    console.log("Enemy removed!");
+                }
             }
         }
 
         function moveMissiles() {
             for (var i=0; i<missiles.length; i++) {
-                missiles[i].top = missiles[i].top - 15;
+                missiles[i].top = missiles[i].top - 3;
+                if (missiles[i].top <= 0) {
+                    missiles.shift();
+                    console.log(missiles);
+                    console.log("Missile removed!");
+                }
             }
         }
 
         document.onkeydown = function(e) {
             console.log(e);
             if (e.keyCode == 37 && player.left > 0) { // LEFT
-                player.left -= 15;
+                player.left -= 25;
             }
             if (e.keyCode == 39 && player.left < 830) { // RIGHT
-                player.left += 15;
+                player.left += 25;
             }
             if (e.keyCode == 40 && player.top < 620) { // DOWN
-                player.top += 15;
+                player.top += 25;
             }
             if (e.keyCode == 38 && player.top > (700 * 2/3)) { // UP
-                player.top -= 15;
+                player.top -= 25;
             }
             if (e.keyCode == 32) { // fire
                 missiles.push({ left: player.left + 34, top: player.top - 8 });
@@ -125,7 +135,7 @@
             moveMissiles();
             drawMissiles();
 
-            setTimeout(gameLoop, 100);
+            setTimeout(gameLoop, 10);
         }
         gameLoop();
     </script>
