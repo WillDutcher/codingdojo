@@ -1,0 +1,20 @@
+Terminal Commands
+pwd = print/present working directory; shows which directory I am currently in
+ls = list files (or dir for Windows); can add -l or -a flags for long-form or all files (including hidden), respectively
+cd = change directory (use cd .. to go back one directory or cd ~ to go to root/home directory)
+mkdir = make a new directory; can nest them as well when you make them (ex: mkdir test/sub-test/sub-sub-test)
+rm = remove a file or empty directory (use -rf flag to remove entire directories if files exist in them, e.g. rm -rf sample_directory/)
+touch = create an empty file
+cp = copy a file to a new/existing file (e.g. 'cp doc_1.txt doc_2.txt' will copy the contents for doc_1.txt to a new--or existing--file called doc_2.txt)
+cp -rf = copy a directory
+open . = Open current directory in GUI, if Linux; use 'start .' for Windows to open in Explorer
+sudo = root-like access
+clear = clear window (or use CTRL + L)
+yes = stress test Mac machines; instantly utilizes 100% of CPU--press CTRL + C to exit
+cat = view contents of file (e.g. cat test/commands.txt)
+history = show previous commands run in terminal
+history | grep <word> = search for a word that you used in your history
+tail -f path/to/log/file.log = continually monitor output of a file (typically done for log files)
+ping = test network connectivity (ex: 'ping -c 4 www.espn.com' will ping ESPN website with four packets and give detail about response time)
+ps -eaf | grep <word> = check for any running processes (ex: 'ps -eaf | grep node') and...
+killall -9 <PID> = kill any process ID (e.g. 'killall -9 3148')
