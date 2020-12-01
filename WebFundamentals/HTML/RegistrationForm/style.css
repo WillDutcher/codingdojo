@@ -1,0 +1,49 @@
+.myForm {
+  width: 400px;
+}
+
+p {
+  margin-top: 5px;
+}
+
+p textarea {
+  margin-top: -10px;
+}
+
+label {
+  margin-right: 10px;
+  display: block;
+  text-align: right;
+}
+
+input {
+  display: inline-block;
+  width: 170px;
+}
+
+.textarea {
+  margin-right: 10px;
+  text-align: right;
+}
+
+#gender {
+  text-align: right;
+}
+
+#gender label {
+  display: inline-block;
+  text-align: left;
+}
+
+#gender input {
+  width: auto;
+}
+
+#submitButton {
+  text-align: right;
+}
+
+#submitButton input {
+  width: 100px;
+  margin-right: 10px;
+}

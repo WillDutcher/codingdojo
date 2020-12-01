@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <!--
+        Super not a fan of how this looks and looking forward to CSS module so I can come fix this.
+    -->
+    <h1>Registration Form</h1>
+    <p>Please fill out the below registration form in its entirety. Upon completion, click the submit button.</p>
+    <h2>My Registration Form</h2>
+    <div>
+        <form action="">
+            <p>
+                <label>
+                    <b>First Name:</b> <input type="text" name="firstName">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <b>Last Name:</b> <input type="text" name="lastName">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <b>Email:</b> <input type="text" name="email">
+                </label>
+            <p>
+                <label>
+                    <b>Password:</b> <input type="password" name="password">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <b>PW Confirm:</b> <input type="password" name="passwordConfirm">
+                </label>
+            </p>
+            <p>
+                <label>
+                    <b>Birthday:</b> <input type="date" name="lastName">
+                </label>
+            </p>
+            <p>
+                <label><b>Gender:</b></label>
+                <label> <input type="radio" name="gender" value="male">Male</label>
+                <label> <input type="radio" name="gender" value="female">Female</label>
+                <label> <input type="radio" name="gender" value="decline">Prefer Not to Say</label>
+                </label>
+            </p>
+            <p>
+                <label><b>A short description about yourself:</b><br></label>
+                <p>
+                    <textarea name="shortDescription" rows="4" cols="40"></textarea>
+                </p>
+            </p>
+            <p>
+                <label><b>Favorite Language: </b>
+                    <select name="favoriteLanguage">
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="Python">Python</option>
+                        <option value="Ruby">Ruby</option>
+                        <option value="C#">C#</option>
+                        <option value="Java">Java</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+        </form>
+    </div>
+</body>
+</html>
