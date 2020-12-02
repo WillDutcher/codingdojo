@@ -6,10 +6,6 @@ p {
   margin-top: 5px;
 }
 
-p textarea {
-  margin-top: -10px;
-}
-
 label {
   margin-right: 10px;
   display: block;
@@ -22,9 +18,11 @@ input {
 }
 
 .textarea {
-  margin-right: 10px;
   text-align: right;
+  margin-right: 10px;
+  margin-top: -10px;
 }
+
 
 #gender {
   text-align: right;
