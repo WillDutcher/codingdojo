@@ -24,7 +24,7 @@
 }
 
 .top-header img {
-  width: 100px;
+  /* width: 100px; */
   height: 75px;
   margin: 0 4px;
 }
@@ -61,16 +61,3 @@
   width: 176px;
   height: 176px;
 }
-
-/*.blocks-container .img-bg {
-  margin: 0 auto;
-  display: inline-block;
-  border: 3px solid black;
-  width: 182px;
-  height: 182px;
-  background-color: #84b5ec;
-}
-.blocks-container img {
-  width: 166px;
-  height: 166px;
-} */
