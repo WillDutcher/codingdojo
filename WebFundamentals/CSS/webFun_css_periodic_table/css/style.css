@@ -1,0 +1,116 @@
+/* UNIVERSAL */
+*,
+p,
+span {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* ELEMENT BOXES */
+p {
+  display: flex;
+  height: 46px;
+  width: 46px;
+  margin: 2px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #808080;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.blue {
+}
+
+.element-blue {
+  background-color: #689bff;
+}
+
+.element-red {
+  background-color: #fd9a98;
+}
+
+.element-yellow {
+  background-color: #fecb00;
+}
+
+.element-green {
+  background-color: #1fca21;
+}
+
+.periodic-number,
+.atomic-weight {
+  font-size: 0.6em;
+}
+
+.periodic-symbol {
+  font-size: 1.2em;
+  color: #1913a2;
+}
+
+/* CONTAINER */
+.container {
+  width: 980px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #eeeeee;
+}
+
+/* ROW */
+.column-header {
+  display: flex;
+}
+
+.table-header {
+  font-size: 0.8em;
+}
+
+.row {
+  display: flex;
+}
+
+.empty-row-1 {
+  width: 808px;
+}
+
+.empty-row-2 {
+  width: 500px;
+}
+
+.extra-margin {
+  margin-right: 10px;
+}
+
+.bottom-row {
+  margin-top: 15px;
+}
+
+.bottom-elements {
+  margin: 0 10px;
+  width: 132px;
+}
+
+.bottom-elements-2 {
+  margin: 0 12px;
+  width: 122px;
+}
+
+.star-1 {
+  display: flex;
+  align-items: center;
+}
+
+/* SPAN */
+span {
+  line-height: 15px;
+}
