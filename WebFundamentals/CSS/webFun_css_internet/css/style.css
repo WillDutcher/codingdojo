@@ -1,0 +1,247 @@
+/*     UNIVERSAL     */
+*,
+h1 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+.blue-text {
+  color: #28669d;
+}
+
+.teal-text {
+  color: #119eb2;
+}
+
+/*     CONTAINER     */
+
+.container {
+  width: 970px;
+  margin: 0 auto;
+}
+
+/*     HEADER     */
+
+header {
+  padding: 0 5px;
+  color: #474747;
+  font-size: 1.25em;
+}
+
+.top-header {
+  display: flex;
+  margin-bottom: -20px;
+  align-items: center;
+  background-color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.bottom-header {
+  background-color: #28669d;
+  background-image: linear-gradient(#28669d, #5484ab, #28669d);
+  color: white;
+  padding: 15px 25px;
+  margin: 0 -5px;
+  font-size: 0.95em;
+}
+
+#logo {
+  width: 100px;
+}
+
+/*     MAIN     */
+
+main {
+  display: flex;
+  background-color: #ffffff;
+  background-image: linear-gradient(#e3e3e3, #ffffff 20%);
+}
+
+/*     ASIDE     */
+
+aside {
+  width: 265px;
+  margin-right: 40px;
+  padding: 20px 0 0 5px;
+}
+
+aside span {
+  color: #d82025;
+}
+
+aside p {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+aside a {
+  display: block;
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 5px 0 8px 0;
+  color: white;
+  border-radius: 4px;
+  font-size: 1.1em;
+  text-align: center;
+  box-shadow: 2px 2px 2px #939393;
+}
+
+#watch-video {
+  background-color: #27669c;
+  background-image: linear-gradient(#85aece, #27669c);
+  margin-bottom: 4px;
+}
+
+#more-resources {
+  background-color: #d07b2d;
+  background-image: linear-gradient(#e9ad5d, #d07b2d);
+}
+
+hr {
+  margin: 15px 0;
+}
+
+.reinvent {
+  background-color: #002246;
+  background-image: url("../images/ad_background.png");
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 15px 10px 25px 10px;
+}
+
+.reinvent img {
+  width: 33%;
+  margin-bottom: 10px;
+}
+
+.reinvent a {
+  background-color: #29c6dd;
+  background-image: linear-gradient(#7dd0de, #00c0dd);
+  box-shadow: 2px 2px 2px #000000;
+  padding: 7px 0;
+  font-size: 0.9em;
+  margin: 0 20px;
+}
+
+.reinvent a span {
+  font-size: 0.8em;
+  color: white;
+  /* margin-right: -1px; */
+}
+
+#light-arrow {
+  font-weight: lighter;
+}
+
+#bold-arrow {
+  font-weight: bolder;
+}
+
+/*     SECTION     */
+
+section {
+  width: 100%;
+}
+
+/*     DNS     */
+
+.contact,
+.dns,
+.phone-nums {
+  display: flex;
+}
+
+.contact {
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.dns #home {
+  height: 15px;
+  margin-top: 10px;
+}
+
+.dns p {
+  margin: 12px 0 0 4px;
+  font-size: 0.8em;
+  color: #306ca0;
+  vertical-align: middle;
+}
+
+.phone-nums #phone-img {
+  height: 30px;
+  margin: 5px;
+}
+
+.phone-nums {
+  margin-right: 3px;
+}
+
+.tiny {
+  text-align: right;
+  font-size: 0.5em;
+}
+
+#main-phone {
+  font-size: 1.16em;
+  font-weight: bolder;
+  color: #00aeda;
+  margin: 1px 0;
+}
+
+section hr {
+  margin-right: 10px;
+}
+
+/*     CLIENTS-SERVERS & WHAT-HAPPENS    */
+
+.clients-servers {
+  margin-bottom: 10px;
+}
+
+section h4 {
+  margin-bottom: 5px;
+}
+
+ul,
+ol {
+  margin: 5px 10px 10px 42px;
+  font-size: 0.934em;
+}
+.clients-servers img {
+  display: block;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/*     FOOTER     */
+
+footer {
+  display: flex;
+  border: 5px solid #28669d;
+  border-bottom: none;
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+footer img {
+  height: 110px;
+  margin-right: 20px;
+}
+
+footer p {
+  margin: 10px 0;
+}
+
+footer a {
+  text-decoration: none;
+}
