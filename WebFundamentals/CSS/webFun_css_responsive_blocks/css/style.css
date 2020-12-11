@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 950px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+#header {
+  min-height: 150px;
+  background-color: green;
+  margin-bottom: 15px;
+}
+
+#navigation {
+  min-height: 300px;
+  width: 200px;
+  background-color: blue;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+}
+
+#main_content {
+  width: 700px;
+  background-color: red;
+  display: inline-block;
+  padding: 15px;
+}
+
+.subcontents {
+  display: inline-block;
+  min-height: 200px;
+  width: 210px;
+  background-color: yellow;
+}
+
+.subcontents:nth-child(2) {
+  margin: 0 15px;
+}
+
+#advertisement {
+  min-height: 120px;
+  width: 670px;
+  background-color: purple;
+  margin-top: 15px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 480px) {
+  #navigation {
+    display: none;
+  }
+  #main_content {
+    width: 100%;
+    padding: 15px;
+  }
+  .subcontents {
+    display: block;
+    width: 100%;
+  }
+  .subcontents:nth-child(2) {
+    margin: 15px 0;
+  }
+  #advertisement {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  #navigation {
+    display: none;
+  }
+  #main_content {
+    width: 100%;
+    padding: 25px;
+  }
+  .subcontents {
+    width: 48%;
+  }
+  .subcontents:nth-child(3) {
+    margin: 25px 0;
+  }
+  .subcontents:nth-child(2) {
+    margin: 0 0 0 25px;
+  }
+  #advertisement {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* Already built for desktop specifications */
+}
