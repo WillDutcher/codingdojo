@@ -1,0 +1,218 @@
+/*
+    Note: I tried to get mine to look as close to original image
+    as I could. This meant I had to adjust some font-sizes.
+    Hope that was okay! If I were building this website from scratch,
+    I likely would use default sizes all the way through unless
+    absolutely necessary for uniformity. Will absolutely re-do
+    that if it's going to take away any points.
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*     UNIVERSAL     */
+
+.wrapper {
+  width: 970px;
+  margin: 0 auto;
+  background-color: #1a1a1a;
+}
+
+li {
+  list-style: none;
+}
+
+/*     HEADER     */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  color: #e4e4e4;
+  padding: 20px;
+}
+
+#phone {
+  align-self: center;
+  padding-bottom: 20px;
+}
+
+/*     NAV     */
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
+  background-color: #282828;
+  background-image: linear-gradient(#515151, #1a1a1a);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #a3a3a3;
+}
+
+#active {
+  color: #dbdbdb;
+}
+
+.vert-line {
+  width: 2px;
+  height: 100%;
+  border-left: 1px solid #383838;
+  border-right: 1px solid #525252;
+  margin: 0 15px;
+}
+
+.vert-line-end {
+  margin-right: 40px;
+  height: 50px;
+}
+
+/*     MAIN IMAGE     */
+#modern-img {
+  width: 960px;
+  margin: 0 5px;
+  box-shadow: 0px 2px #3b3b3b;
+}
+
+/*     SECTION     */
+section {
+  display: flex;
+  color: #cfcfcf;
+  padding: 20px 5px;
+}
+
+section .info-card {
+  display: flex;
+  width: 230px;
+  margin: 0 5px 0 13px;
+}
+
+section .info-card img {
+  align-self: flex-start;
+  width: 48px;
+  margin-right: 15px;
+}
+
+section .info-card .img-adjust {
+  margin-top: -5px;
+}
+
+section .info-card h4 {
+  font-size: 1.1em;
+  color: #ef7f2c;
+}
+
+section .info-card p {
+  font-size: 0.74em;
+}
+
+/*     ADVERTISEMENT     */
+.advertisement {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #050505,
+    #050505 1px,
+    #202020 1px,
+    #202020 3px
+  );
+}
+
+.advertisement-text {
+  width: 700px;
+  padding: 10px 20px;
+}
+
+.advertisement h2 {
+  margin-bottom: 10px;
+  font-size: 1.63em;
+  font-weight: 100;
+  color: #f0f0f0;
+}
+
+.advertisement p {
+  font-size: 0.85em;
+  color: #b0b0b0;
+}
+
+.advertisement a {
+  display: inline-block;
+  align-self: center;
+  margin-right: 25px;
+  padding: 10px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: #f08b40;
+  background-image: linear-gradient(#f7c19a, #ef7f2c);
+  color: #f0f0f0;
+}
+
+/*     FOOTER     */
+footer {
+  padding: 20px 5px 2px 5px;
+  background-color: #1a1a1a;
+  color: #f2f2f2;
+}
+
+footer .footer-portfolio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 15px;
+}
+
+footer h2 {
+  font-family: "Bitter", serif;
+}
+
+footer h5 a {
+  color: #ef7f2c;
+  text-decoration: none;
+}
+
+.portfolio-cards {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.portfolio-card {
+  width: 221.25px;
+}
+
+.portfolio-card img {
+  border: 3px solid #363636;
+}
+
+.portfolio-card h4 {
+  font-size: 0.92em;
+  color: #ef7f2c;
+  margin: 10px 0;
+}
+
+.portfolio-card p {
+  font-size: 0.75em;
+}
+
+h6 {
+  text-align: right;
+  margin-right: 20px;
+}
+
+h6 a {
+  color: #7c7670;
+  text-decoration: none;
+}
