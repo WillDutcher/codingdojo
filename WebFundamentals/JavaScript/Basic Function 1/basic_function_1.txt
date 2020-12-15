@@ -1,0 +1,18 @@
+Number Correctly Predicted 14/15
+Wrong	Number	output 1
+	1.	35
+	2.	8
+	3.	6
+	4.	3, 9
+	5.	40
+	6.	4
+x	7.	10, 3, 30	// Did not realize you can print multiple numbers with comma and treats as series of print commands
+	8.	3, 4
+	9.	2, 5, 8, 11
+	10.	0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0,  1, 2, 3, 4, 5, 6, 7, 8, 9, 0
+	11.	N/A; never called
+	12.	N/A; never called
+	13.	10
+	14.	15, 10
+	15.	15, 15
+
