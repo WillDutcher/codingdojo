@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pacman</title>
+        <meta name="description" content="A pacman game built with HTML, CSS, and JavaScript.">
+        <style type="text/css">
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: black;
+                margin: 0px;
+                padding: 0px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+            }
+            div.row {
+                line-height: 0;
+            }
+            div.row div {
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+            }
+            div.brick {
+                background-color: blue;
+            }
+            div.coin {
+                background-image: url("images/coin.gif");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            div.cherry {
+                background-image: url("images/cherry.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            div.empty {
+                
+            }
+            div#pacman {
+                background-image: url("images/pacman.gif");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+            }
+            div#score {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50px;
+                height: 30px;
+                margin: 20px 75px;
+                border: 1px solid white;
+                color: white;   
+                font-weight: bolder;             
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- 
+
+            TO DO:
+            1 - Transfer style tags to a .css file
+            2 - Get Pacman to look up/down/left/right
+            3 - Get ghost to show up
+            4 - Get ghost to move in random directions
+            5 - Get to pacmans to show up and move
+
+        -->
+
+        <div id="container">
+            <div id="world"></div>
+            <div id="pacman"></div>
+            <div id="score"></div>
+        </div>
+
+        <!-- List of features to build
+
+        1) Have JS display the world of bricks/coins/etc - DONE!!!!
+        2) Have Pacman move up and down -->
+
+        <script>
+            var worldDict = {
+                0: 'empty',
+                1: 'brick',
+                2: 'coin',
+                3: 'cherry'
+            };
+            var pacman = {
+                    x: 1,
+                    y: 1
+                };
+            var score = 0;
+            var coinPoints = 10;
+            var cherryPoints = 25;
+            var worldSize = Math.floor(Math.random() * 10 + 8);
+            var world = []
+            // var world = [
+            //     [2,2,2,2,2,2,2,2,2,2],
+            //     [2,0,2,1,1,1,1,1,1,2],
+            //     [2,1,2,2,2,1,1,2,1,2],
+            //     [2,1,1,1,2,1,1,1,2,2],
+            //     [2,1,2,1,2,1,2,1,1,2],
+            //     [2,1,2,1,2,1,1,2,1,2],
+            //     [2,1,2,2,2,1,1,1,1,2],
+            //     [2,1,1,1,2,1,2,1,1,2],
+            //     [2,1,1,1,1,1,1,1,1,2],
+            //     [2,2,2,2,2,2,2,2,2,2]
+            // ];
+
+            function makeRandomWorld() {
+                world.push(makeOuterWall());
+                for (var i = 0; i < worldSize - 2; i++) {
+                    world.push(makeInnerWorld());
+                }
+                world.push(makeOuterWall());
+                console.log(world);
+            }
+
+            function makeOuterWall() {
+                var outerWall = [];
+                for (var i = 0; i < worldSize; i++) {
+                    outerWall.push(1);
+                }
+                return outerWall;
+            }
+
+            function makeInnerWorld() {
+                var innerWorld = [];
+                innerWorld.push(1);
+                for (var i = 0; i < worldSize - 2; i++) {
+                    innerWorld.push(Math.floor(Math.random() * 4))
+                }
+                innerWorld.push(1);
+                return innerWorld;
+            }
+
+            function displayWorld() {
+                output = "";
+
+                for (var row = 0; row < world.length; row++) {
+                    output += "\n<div class='row'>\n";
+                    for (var x = 0; x < world[row].length; x++) {
+                        output += "<div class = '" + worldDict[world[row][x]] + "'></div>";
+                    }
+                    output += "\n</div>";
+                }
+                document.getElementById('world').innerHTML = output;
+            }
+
+            function displayPacman() {
+                document.getElementById('pacman').style.top = pacman.y*20 + "px";
+                document.getElementById('pacman').style.left = pacman.x*20 + "px";                
+            }
+
+            function displayScore() {
+                document.getElementById('score').innerHTML = score;                
+            }
+
+            makeRandomWorld();
+            displayWorld();
+            displayPacman();
+            displayScore();
+            
+            document.onkeydown = function(e) {
+                if (e.keyCode == 37 && world[pacman.y][pacman.x - 1] != 1) { // LEFT
+                    pacman.x--;
+                }
+                else if (e.keyCode == 39 && world[pacman.y][pacman.x + 1] != 1) { // RIGHT
+                    pacman.x++;
+                }
+                else if (e.keyCode == 38 && world[pacman.y - 1][pacman.x] != 1) { // UP
+                    pacman.y--;
+                }
+                else if (e.keyCode == 40 && world[pacman.y + 1][pacman.x] != 1) { // DOWN
+                    pacman.y++;
+                }
+                if (world[pacman.y][pacman.x] == 2) {
+                    world[pacman.y][pacman.x] = 0;
+                    score += coinPoints;
+                    displayWorld();
+                    displayScore();
+                } else if (world[pacman.y][pacman.x] == 3) {
+                    world[pacman.y][pacman.x] = 0;
+                    score += cherryPoints;
+                    displayWorld();
+                    displayScore();
+                }
+                displayPacman();
+            }
+
+            /* If the drawn world will not allow ninjaman to immediately move, reload. */
+            if (world[ninjaman.y][ninjaman.x + 1] == 1 && world[ninjaman.y + 1][ninjaman.x] == 1) {
+                location.reload();
+            }
+            
+        </script>
+
+    </body>
+</html>
