@@ -26,11 +26,80 @@
 
 <body>
     <div class="container">
-       
-    </div> <!-- end container -->
+        <header class="pt-5 mb-3 text-center">
+            <h1>Ninja to Cat</h1>
+            <h5 class="my-4">Click an image and it will toggle between a ninja and a cat.</h5>
+        </header>
+        <!--        METHOD 1        -->
+        <div class="py-5 d-flex align-items-center flex-column">
+            <div class="one-of-five pb-1">
+                <img id="cat0" src="./img/cat0.png" alt="Cat image 1 of 5">
+                <img id="ninja0" src="./img/ninja0.png" alt="Ninja image 1 of 5">
+            </div>
+            <div class="two-of-five pb-1">
+                <img id="cat1" src="./img/cat1.png" alt="Cat image 2 of 5">
+                <img id="ninja1" src="./img/ninja1.png" alt="Ninja image 2 of 5">
+            </div>
+            <div class="three-of-five pb-1">
+                <img id="cat2" src="./img/cat2.png" alt="Cat image 3 of 5">
+                <img id="ninja2" src="./img/ninja2.png" alt="Ninja image 3 of 5">
+                <div class="five-of-five pb-1">
+            </div>
+            <div class="four-of-five pb-1">
+                <img id="cat3" src="./img/cat3.png" alt="Cat image 4 of 5">
+                <img id="ninja3" src="./img/ninja3.png" alt="Ninja image 4 of 5">
+            </div>
+                <img id="cat4" src="./img/cat4.png" alt="Cat image 5 of 5">
+                <img id="ninja4" src="./img/ninja4.png" alt="Ninja image 5 of 5">
+            </div>        
+        </div>
 
+        <!--        METHOD 2        -->
+        <div class="py-5 d-flex align-items-center flex-column">
+            <div class="one-of-five pb-1">
+                <img src="./img/ninja0.png" data-alt-src='./img/cat0.png' alt="Cat or Ninja image 1 of 5">
+            </div>
+            <div class="two-of-five pb-1">
+                <img src="./img/ninja1.png" data-alt-src='./img/cat1.png' alt="Cat or Ninja image 2 of 5">
+            </div>
+            <div class="three-of-five pb-1">
+                <img src="./img/ninja2.png" data-alt-src='./img/cat2.png' alt="Cat or Ninja image 3 of 5">
+            </div>
+            <div class="four-of-five pb-1">
+                <img src="./img/ninja3.png" data-alt-src='./img/cat3.png' alt="Cat or Ninja image 4 of 5">
+            </div>
+            <div class="five-of-five pb-1">
+                <img src="./img/ninja4.png" data-alt-src='./img/cat4.png' alt="Cat or Ninja image 5 of 5">
+            </div>
+        </div>
+    </div> <!-- end container -->
+    
     <script>
-        
+        // Method 1
+        $('#ninja0, #ninja1, #ninja2, #ninja3, #ninja4').hide();
+        $('#cat0, #ninja0').on('click', function() {
+            $('#cat0, #ninja0').toggle();
+        });
+        $('#cat1, #ninja1').on('click', function () {
+            $('#cat1, #ninja1').toggle();
+        });
+        $('#cat2, #ninja2').on('click', function () {
+            $('#cat2, #ninja2').toggle();
+        });
+        $('#cat3, #ninja3').on('click', function () {
+            $('#cat3, #ninja3').toggle();
+        });
+        $('#cat4, #ninja4').on('click', function () {
+            $('#cat4, #ninja4').toggle();
+        });
+
+        // Method 2
+        $('img').click(function() {
+            var currentImage = $(this).attr('src');
+            var altImage = $(this).attr('data-alt-src');
+            $(this).attr('src', altImage);
+            $(this).attr('data-alt-src', currentImage);
+        })
     </script>
 </body>
 
