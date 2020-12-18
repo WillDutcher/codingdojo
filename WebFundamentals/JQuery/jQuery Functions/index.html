@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jQuery Functions</title>
+    <meta name="description" content="Web page containing 17 jQuery functions.">
+    <!-- Load CSS and Bootstrap -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Load Optional JavaScript -->
+    <!-- scripts - jQuery first, then Popper.js, then Bootstrap.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>    
+</head>
+
+<body>
+    <div class="container">
+        <header class="full-bottom-border">
+            <h1 id="top" class="text-center pt-4 pb-3">jQuery Functions</h1>
+        </header>
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-addClass" class="text-center pb-3">.addClass()</h2>
+            <div class="row align-items-center">
+                <a id="btn-add-class" class="col-2 offset-1 btn btn-primary" href="#h2-addClass">addClass()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Adds the specified class(es) to each element in the set of matched elements.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: <span id="add-class">Click the button to add the 'text-primary' class to this text, which will turn it blue.</span>
+                    </p>
+                </div>
+            </div>            
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-after" class="text-center pb-3">.after()</h2>
+            <div class="row align-items-center">
+                <a id="btn-after" class="col-2 offset-1 btn btn-primary" href="#h2-after">after()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Insert content, specified by the parameter, after each element in the set of matched elements.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: <span id="after">Click the button to add additional text to this paragraph in <strong class="text-success">bold green</strong> text. </span>
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-append" class="text-center pb-3">.append()</h2>
+            <div class="row align-items-center">
+                <a id="btn-append" class="col-2 offset-1 btn btn-primary" href="#h2-append">append()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Insert content, specified by the parameter, to the end of each element in the set of matched elements.
+                    </p>
+                    <p id="append" class="ex">
+                        <strong>Example</strong>: Click the button to append <strong class="text-danger">bold red</strong> text. 
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-attr" class="text-center pb-3">.attr()</h2>
+            <div class="row align-items-center">
+                <a id="btn-attr" class="col-2 offset-1 btn btn-primary" href="#h2-attr">attr()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: Click the button to change the placeholder text in the text field below.
+                    </p>
+                    <input id="attr" class="my-3" type="text" placeholder=" Watch me change">
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-before" class="text-center pb-3">.before()</h2>
+            <div class="row align-items-center">
+                <a id="btn-before" class="col-2 offset-1 btn btn-primary" href="#h2-before">before()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Insert content, specified by the parameter, before each element in the set of matched elements.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: <span id="before">Click the button to insert <strong class="text-info">bold teal</strong> text before this sentence.</span>
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-click" class="text-center pb-3">.click()</h2>
+            <div class="row align-items-center">
+                <a id="btn-click" class="col-2 offset-1 btn btn-primary" href="#h2-click">click()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Bind an event handler to the “click” JavaScript event, or trigger that event on an element.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: Click the button to show an alert box indicating you clicked the button.
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-fadeIn" class="text-center pb-3">.fadeIn()</h2>
+            <div class="row align-items-center">
+                <a id="btn-fadeIn" class="col-2 offset-1 btn btn-primary" href="#h2-fadeIn">fadeIn()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Display the matched elements by fading them to opaque.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: Click the button to fade in the text below this paragraph.
+                    </p>
+                    <p id="fadeIn" class="ex my-3 pl-1" style="display:none;">
+                        This text just faded in.
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-fadeOut" class="text-center pb-3">.fadeOut()</h2>
+            <div class="row align-items-center">
+                <a id="btn-fadeOut" class="col-2 offset-1 btn btn-primary" href="#h2-fadeOut">fadeOut()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Hide the matched elements by fading them to transparent.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: Click the button to fade out the text below this paragraph.
+                    </p>
+                    <p id="fadeOut" class="my-3 pl-2 bg-dark text-white">
+                        This text will fade out.
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-hide" class="text-center pb-3">.hide()</h2>
+            <div class="row align-items-center">
+                <a id="btn-hide" class="col-2 offset-1 btn btn-primary" href="#h2-hide">hide()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Hide the matched elements.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: Click the button to hide the paragraph below.
+                    </p>
+                    <p id="hide" class="my-3 pl-2 bg-warning">
+                        This paragraph will be hidden.
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-html" class="text-center pb-3">.html()</h2>
+            <div class="row align-items-center">
+                <a id="btn-html" class="col-2 offset-1 btn btn-primary" href="#h2-html">html()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched
+                        element.
+                    </p>
+                    <p id="html" class="ex">
+                        <strong>Example</strong>: Click the button to get the contents of this paragraph and display them in an alert message.
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-show" class="text-center pb-3">.show()</h2>
+            <div class="row align-items-center">
+                <a id="btn-show" class="col-2 offset-1 btn btn-primary" href="#h2-show">show()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Display the matched elements.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: Click the button to show the hidden paragraph below.
+                    </p>
+                    <p id="show" class="ex my-3 pl-2" style="display:none;">
+                        This paragraph just came into existence.
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-slideDown" class="text-center pb-3">.slideDown()</h2>
+            <div class="row align-items-center">
+                <a id="btn-slideDown" class="col-2 offset-1 btn btn-primary" href="#h2-slideDown">slideDown()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Display the matched elements with a sliding motion.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: Click the button to slide down a paragraph of hidden text.
+                    </p>
+                    <p id="slideDown" class="ex my-3 pl-2 bg-dark text-white" style="display:none;">
+                        This paragraph just slid down.
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="ht-slideToggle" class="text-center pb-3">.slideToggle()</h2>
+            <div class="row align-items-center">
+                <a id="btn-slideToggle" class="col-2 offset-1 btn btn-primary" href="#h2-slideToggle">slideToggle()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Display or hide the matched elements with a sliding motion.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: Click the button to do a slide toggle on the paragraph of text below.
+                    </p>
+                    <p id="slideToggle" class="ex my-3 pl-2 bg-warning text-success">
+                        This paragraph will toggle as hidden and shown each time the button is pressed.
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-slideUp" class="text-center pb-3">.slideUp()</h2>
+            <div class="row align-items-center">
+                <a id="btn-slideUp" class="col-2 offset-1 btn btn-primary" href="#h2-slideUp">slideUp()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Hide the matched elements with a sliding motion.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: Click the button to make the hidden paragraph below slide up.
+                    </p>
+                    <p id="slideUp" class="my-3 pl-2 bg-white text-dark">
+                        This paragraph will slide up.
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-text" class="text-center pb-3">.text()</h2>
+            <div class="row align-items-center">
+                <a id="btn-text" class="col-2 offset-1 btn btn-primary" href="#h2-text">text()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: Click the button to change the text in the following box.
+                    </p>
+                    <p id="text" class="my-3 pl-2 bg-info text-warning">
+                        This text will be replaced when the button is pressed.
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-toggle" class="text-center pb-3">.toggle()</h2>
+            <div class="row align-items-center">
+                <a id="btn-toggle" class="col-2 offset-1 btn btn-primary" href="#h2-toggle">toggle()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Display or hide the matched elements.
+                    </p>
+                    <p class="ex">
+                        <strong>Example</strong>: Click the button to toggle whether or not it shows.
+                    </p>
+                    <p id="toggle" class="ex my-3 pl-2 bg-success text-warning">
+                        This paragraph will toggle as hidden and shown each time the button is pressed.
+                    </p>
+                </div>
+            </div>
+        </div><!-- end example -->
+        <div class="jQuery-example full-bottom-border">
+            <h2 id="h2-val" class="text-center pb-3">.val()</h2>
+            <div class="row align-items-center">
+                <a id="btn-val" class="col-2 offset-1 btn btn-primary" href="#h2-val">val()</a>
+                <div class="desc-ex col-8 mb-0 pl-5">
+                    <p class="desc">
+                        <strong>Description</strong>: Get the current value of the first element in the set of matched elements or set the value of every matched element.
+                    </p>
+                    <p id="val" class="ex">
+                        <strong>Example</strong>: Click the button to display the values of the various inputs.
+                    </p>
+                    <div class="ml-5">
+                        <label class="my-3" >
+                            <b>Text Field: </b><input id="text-field" type="text" placeholder=" Enter some text"><br>
+                        </label><br>
+                        <label class="my-3">
+                            <b>Checkbox: </b><input id="checkbox" type="checkbox">
+                        </label><br>
+                        <label class="my-3">
+                            <b>Birthday:</b> <input id="birthday" type="date" name="birthday">
+                        </label><br>
+                        <label class="my-3"><b>Favorite Language: </b>
+                            <select id="fav-langs" name="favoriteLanguage" multiple size="5" style="width: 120px;">
+                                <option value="JavaScript" class="ml-2">JavaScript</option>
+                                <option value="Python" class="ml-2">Python</option>
+                                <option value="Ruby" class="ml-2">Ruby</option>
+                                <option value="C#" class="ml-2">C#</option>
+                                <option value="Java" class="ml-2">Java</option>
+                            </select>
+                        </label><br>
+                        <label><b>Radio Buttons:</b></label>
+                        <label>
+                            <input type="radio" name="sample-radio-buttons" value="a" class="ml-2">A
+                            </label>
+                        <label>
+                            <input type="radio" name="sample-radio-buttons" value="b" class="ml-3">B
+                        </label>
+                        <label>
+                            <input type="radio" name="sample-radio-buttons" value="c" class="ml-3">C
+                        </label>
+                        <hr>
+                        <p><b>Text Field</b>: <span id="answer-text-field">Answer</span></p>
+                        <p><b>Checkbox</b>: <span id="answer-checkbox">Answer</span></p>
+                        <p><b>Birthday</b>: <span id="answer-birthday">Answer</span></p>
+                        <p><b>Favorite Languages</b>: <span id="answer-fav-langs">Answer</span></p>
+                        <p><b>Radio Buttons</b>: <span id="answer-radio">Answer</span></p>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end example -->
+    </div> <!-- end container -->
+
+    <script>
+        // addClass
+        $('#btn-add-class').click(function() {
+            $('#add-class').addClass('text-primary');
+        });
+
+        // after
+        $('#btn-after').click(function() {
+            $('#after').after('<span class="text-success"><strong>I am new text that was just added. </strong></span>');
+        });
+
+        // append
+        $('#btn-append').click(function() {
+            $('#append').append('<span class="text-danger"><strong>I am the new appended text. </strong></span>');
+        });
+
+        // attr
+        $('#btn-attr').click(function() {
+            $('#attr').attr('placeholder', ' Placeholder changed!!!');
+        });
+
+        // before
+        $('#btn-before').click(function () {
+            $('#before').before('<span class="text-info"><strong>I am new text that was added before the old text. </strong></span>');
+        });
+
+        // click
+        $('#btn-click').click(function() {
+            alert("Congratulations. You clicked a button.");
+        });
+
+        // fadeIn
+        $('#btn-fadeIn').click(function() {
+            $('#fadeIn').addClass('bg-dark text-light')
+            $('#fadeIn').fadeIn(1500);
+        });
+
+        // fadeOut
+        $('#btn-fadeOut').click(function() {
+            $('#fadeOut').fadeOut(1500);
+        });
+
+        // hide
+        $('#btn-hide').click(function() {
+            $('#hide').hide(1500);
+        })
+
+        // html
+        $('#btn-html').click(function () {
+            var myMessage = $('#html').html();
+            alert(myMessage);
+            // $('html').html()
+        });
+
+        // show
+        $('#btn-show').click(function () {
+            console.log("Show button clicked")
+            $('#show').show(1500);
+        });
+
+        // slideDown
+        $('#btn-slideDown').click(function () {
+            $('#slideDown').slideDown(750);
+        });
+
+        // slideToggle
+        $('#btn-slideToggle').click(function () {
+            $('#slideToggle').slideToggle(750);
+        });
+
+        // slideUp
+        $('#btn-slideUp').click(function () {
+            $('#slideUp').slideUp(750);
+        });
+
+        // text
+        $('#btn-text').click(function () {
+            $('#text').text('Look! The text was changed! I told you!  There are two sentences here so the chamge is impactful enough for you to have noticed. Did you?!');
+        });
+
+        // toggle
+        $('#btn-toggle').click(function () {
+            $('#toggle').toggle(750);
+        });
+
+        // val
+        $('#btn-val').click(function () {
+            var text = $('#text-field').val();
+            var checkbox = $('#checkbox:checked').val();
+            var birthday = $('#birthday').val();
+            var favLangs = $('select#fav-langs').val();
+            var radio = $('input[name=sample-radio-buttons]:checked').val();
+            if (checkbox !== 'on') {
+                checkbox = 'off'
+            }
+            $('#answer-text-field').text(text);
+            $('#answer-checkbox').text(checkbox);
+            $('#answer-birthday').text(birthday);
+            $('#answer-fav-langs').text(favLangs);
+            $('#answer-radio').text(radio);
+        });
+    </script>
+</body>
+
+</html>
