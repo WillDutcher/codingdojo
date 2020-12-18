@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e3e3e3;
+}
+
+.container {
+  width: 960px;
+  background-color: white;
+}
+
+.img-container {
+  margin: 10px;
+}
+
+.img-bg {
+  border: 3px solid black;
+  margin: 10px;
+}
+
+img {
+  width: 200px;
+  display: none;
+}
+
+#refresh {
+  justify-self: center;
+}
