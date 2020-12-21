@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+}
+
+.container {
+  height: 100vh;
+  background-color: #fff;
+}
+
+label {
+  display: block;
+  width: 178px;
+  margin-right: 30px;
+}
+
+.radio_label {
+  width: 70px;
+}
+
+.radio_option {
+  width: 70px;
+  margin: 0 10px 0 0;
+}
