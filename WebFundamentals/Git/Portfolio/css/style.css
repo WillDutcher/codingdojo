@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+}
+
+.container {
+  height: 100vh;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+nav .marker {
+  font-family: "Permanent Marker", cursive;
+}
+
+main img {
+  height: 200px;
+}
+
+main .about-me {
+  flex: 1 1 auto;
+}
