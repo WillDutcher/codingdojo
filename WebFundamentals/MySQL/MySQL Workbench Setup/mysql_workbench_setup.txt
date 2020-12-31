@@ -1,0 +1,34 @@
+USE lead_gen_business;
+
+-- Once you've connected the database, try the queries that would need to make a CRUD
+-- application (create, read, update, delete). In other words, use the SQL commands
+-- INSERT, SELECT, UPDATE, and DELETE.
+
+-- Show all clients by first and last name
+SELECT first_name, last_name
+FROM clients;
+
+-- INSERT new client (self); satisfies CREATE from CRUD
+INSERT INTO clients(first_name, last_name, email, joined_datetime)
+VALUES ('Will', 'Dutcher', 'william.c.dutcher@gmail.com', now());
+
+-- Show all clients to ensure new client was added, as appropriate; satisfies READ from CRUD
+SELECT *
+FROM clients;
+
+-- Update first name; satisfies UPDATE from CRUD
+UPDATE clients
+SET first_name = 'William'
+WHERE first_name = 'Will';
+
+-- Show all clients to ensure client was updated, as appropriate
+SELECT *
+FROM clients;
+
+-- Delete created/updated client 'William Dutcher' from the database; satisfies DELETE from CRUD
+DELETE FROM clients
+WHERE first_name = 'William' AND last_name = 'Dutcher';
+
+-- Show that client was deleted, as appropriate
+SELECT *
+FROM clients;
