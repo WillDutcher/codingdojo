@@ -25,7 +25,8 @@ class User {
         // return [this.name, this.accountBalance, otherUser.name, otherUser.accountBalance]; would we ever need this?
     }
 }
-console.log("TEST");
+
+
 // Create 3 Instances
 const alexei = new User('Alexei', 'alexei@example.org');
 const brittani = new User('Brittani', 'brittanywithani@email.com');
@@ -44,6 +45,6 @@ corwin.makeDeposit(8983).makeWithdrawal(2778).makeWithdrawal(2608).makeWithdrawa
 corwin.displayBalance();
 
 // Add a transferMoney method; have the first user transfer money to the third user and then print both users' balances
-console.log("HERE: " + alexei.transferMoney(corwin, 1375));
+alexei.transferMoney(corwin, 1375);
 alexei.displayBalance();
 corwin.displayBalance();
