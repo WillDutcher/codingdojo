@@ -1,0 +1,18 @@
+Postman + Pokemon
+
+Read the docs, and use Postman to perform 5 different GET requests to retrieve 5 different Pokemon of your choice.
+
+https://pokeapi.co/api/v2/berry/1
+	Returns berry with id=1 ("cheri-berry") in Pokemon API.
+
+https://pokeapi.co/api/v2/berry?offset=0&limit=64
+	Returns all the berries with a name and direct url link to each individual berry.
+
+https://pokeapi.co/api/v2/pal-park-area/
+	Returns all pal park areas (total 5).
+
+https://pokeapi.co/api/v2/item-pocket/3/
+	Returns item pokcets for id=3.
+
+https://pokeapi.co/api/v2/move-category/11
+	Returns all the moves associated with id=11
