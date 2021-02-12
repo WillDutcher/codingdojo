@@ -5,4 +5,4 @@ const PersonSchema = new mongoose.Schema({
     lastName: { type: String }
 }, {timestamps: true });
 
-module.exports.Person = mongoose.model('Person', PersonSchema);
+module.exports = mongoose.model('Person', PersonSchema);

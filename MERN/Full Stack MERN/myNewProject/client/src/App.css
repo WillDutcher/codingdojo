@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.home-btn {
+    color: yellow;
+    text-decoration: none;
+}
+
+.home-btn-div:hover {
+    background-color: #000000;
+    color: yellow;
+}
+
+.home-btn:hover {
+    color: yellow;
+    text-decoration: none;
+}

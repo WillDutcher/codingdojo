@@ -7,6 +7,7 @@ module.exports.findAllUsers = (req, res) => {
 };
 
 module.exports.findOneSingleUser = (req, res) => {
+  console.log("ID: " + req.params.id)
 	User.findOne({ _id: req.params.id })
 		.then(oneSingleUser => res.json({ user: oneSingleUser }))
 		.catch(err => res.json({ message: "Something went wrong", error: err }));

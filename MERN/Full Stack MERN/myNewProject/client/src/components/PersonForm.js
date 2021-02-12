@@ -16,6 +16,7 @@ const PersonForm = () => {
             .catch(err => console.log(err))
         setFirstName("");
         setLastName("");
+
     }
 
     return (

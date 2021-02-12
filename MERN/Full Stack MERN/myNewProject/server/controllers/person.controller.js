@@ -1,4 +1,4 @@
-const { Person } = require('../models/person.model');
+const Person = require('../models/person.model');
 
 const index = (req, res) => {
     res.json({
@@ -16,9 +16,23 @@ const createPerson = (req, res) => {
         .catch(err => res.json(err));
 };
 
+const getAllPeople = (req, res) => {
+    Person.find({})
+        .then(persons => res.json(persons))
+        .catch(err => res.json(err));
+};
+
+const getPerson = (req, res) => {
+    Person.findOne({ _id: req.params.id })
+        .then(person => res.json(person))
+        .catch(err => res.json(err));
+};
+
 module.exports = {
     index,
-    createPerson
+    createPerson,
+    getAllPeople,
+    getPerson
 }
 
 
