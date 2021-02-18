@@ -17,8 +17,11 @@ const Detail = (props) => {
             <div className="home-btn-div btn btn-sm btn-dark py-1 px-3 mb-3">
                 <Link className="home-btn" to="/people">Go Back</Link>
             </div>
-            <p>First Name: {person.firstName}</p>
-            <p>Last Name: {person.lastName}</p>
+            <p>First Name: { person.firstName }</p>
+            <p>Last Name: { person.lastName }</p>
+            <Link to={`/people/${ person._id }/edit`}>
+                Edit
+            </Link>
         </div>
     );
 };

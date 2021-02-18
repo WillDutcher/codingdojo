@@ -28,11 +28,18 @@ const getPerson = (req, res) => {
         .catch(err => res.json(err));
 };
 
+const updatePerson = (req, res) => {
+    Person.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true })
+        .then(updatedPerson => res.json(updatedPerson))
+        .catch(err => res.json(err));
+};
+
 module.exports = {
     index,
     createPerson,
     getAllPeople,
-    getPerson
+    getPerson,
+    updatePerson
 }
 
 

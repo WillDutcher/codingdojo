@@ -6,19 +6,22 @@ const Detail = (props) => {
     const [ product, setProduct ] = useState({});
 
     useEffect( () => {
-        axios.get("http://localhost:8000/api/products/" + props.id)
+        axios.get(`http://localhost:8000/api/products/${props.id}`)
             .then(res => setProduct({
                 ...res.data
             }))
-    }, [product, props.id]);
+    }, [props.id]);
 
     return (
         <div>
             <p className="btn btn-sm btn-primary py-1 px-3 mb-3">
                 <Link className="text-white text-decoration-none" to="/products">Go Back</Link>
             </p>
-            <p>Item: {product.title}, Price: ${product.price}</p>
-            <p>Description: {product.desc}</p>
+            <p>Item: { product.title }, Price: ${ product.price }</p>
+            <p>Description: { product.desc }</p>
+            <Link to={`/products/${ product._id }/edit`}>
+                Edit
+            </Link>
         </div>
     );
 };

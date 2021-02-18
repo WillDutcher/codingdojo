@@ -22,16 +22,20 @@ const PersonForm = () => {
     return (
         <form onSubmit={ onSubmitHandler }>
             <p>
-                <label>First Name</label><br/>
+                <label htmlFor="firstName">First Name</label><br/>
                 <input
+                    className="pl-1"
+                    id="firstName"
                     type="text"
                     onChange={ (e) => setFirstName(e.target.value) }      // onChange to update firstName
                     value={ firstName }
                 />
             </p>
             <p>
-                <label>Last Name</label><br/>
+                <label htmlFor="lastName">Last Name</label><br/>
                 <input
+                    className="pl-1"
+                    id="lastName"
                     type="text"
                     onChange={ (e) => setLastName(e.target.value) }       // onChange to update lastName
                     value={ lastName }
