@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { navigate } from '@reach/router';
 import axios from 'axios';
 
 const ProductForm = () => {
@@ -15,6 +16,8 @@ const ProductForm = () => {
             desc
         })
             .then(res => console.log(res))
+            .then(navigate(`/products`))
+            .then(console.log("Submitted!"))
             .catch(err => console.log(err))
         setTitle("");
         setPrice("");

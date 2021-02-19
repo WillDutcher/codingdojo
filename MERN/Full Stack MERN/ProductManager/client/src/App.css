@@ -20,3 +20,8 @@ label {
   width: 140px;
   text-align: left;
 }
+
+.detail-btns > * {
+  margin: 8px;
+  width: 80px;
+}

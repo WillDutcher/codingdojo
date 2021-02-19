@@ -4,9 +4,9 @@ import axios from 'axios';
 
 const Update = (props) => {
     const { id } = props;
-    const [ title, setTitle ] = useState();
-    const [ price, setPrice ] = useState();
-    const [ desc, setDesc ] = useState();
+    const [ title, setTitle ] = useState('');
+    const [ price, setPrice ] = useState('');
+    const [ desc, setDesc ] = useState('');
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/products/${id}`)
@@ -15,7 +15,7 @@ const Update = (props) => {
                 setPrice(res.data.price);
                 setDesc(res.data.desc);
             })
-    }, [id]);
+    }, []);
 
     const updateProduct = (e) => {
         e.preventDefault();

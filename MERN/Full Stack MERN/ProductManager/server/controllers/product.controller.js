@@ -35,10 +35,17 @@ const updateProduct = (req, res) => {
         .catch(err => res.json(err));
 };
 
+const deleteProduct = (req, res) => {
+    Product.deleteOne({ _id: req.params.id })
+        .then(deleteConfirmation => res.json(deleteConfirmation))
+        .catch(err => res.json(err))
+};
+
 module.exports = {
     index,
     createProduct,
     getAllProducts,
     getProduct,
-    updateProduct
+    updateProduct,
+    deleteProduct
 }
