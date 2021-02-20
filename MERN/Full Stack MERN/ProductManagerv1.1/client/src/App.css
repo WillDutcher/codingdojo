@@ -87,6 +87,18 @@ label {
   margin: 0px 0px 2px 13px;
 }
 
+button,
+.link-btn {
+  width: 100px;
+}
+
 #add-product-btn {
+  width: 100%;
   margin: 0 auto;
+}
+
+#home-btn {
+  display: block;
+  margin: 0 auto;
+  width: 234px;
 }

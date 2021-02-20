@@ -66,7 +66,7 @@ const CreateProduct = (props) => {
             </div>
             <button
                 id="add-product-btn"
-                className="d-block btn btn-secondary"
+                className="d-block btn btn-primary"
                 type="submit"
             >
                 Add Product

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Router, Link } from '@reach/router';
+import Main from './views/Main';
 import CreateProduct from './components/CreateProduct';
 import EditProduct from './components/EditProduct';
 import SingleProduct from './components/SingleProduct';
@@ -23,7 +24,8 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <AllProducts path="/products" />
+        <Main path="/products" />
+        {/* <AllProducts path="/products" /> */}
         <CreateProduct path="/products/new" />
         <SingleProduct path="/products/:id" />
         <EditProduct path="/products/:id/edit" />
