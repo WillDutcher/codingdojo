@@ -9,7 +9,7 @@ const SingleProduct = (props) => {
         console.log("Editing product")
     }
 
-    const deleteProduct2 = () => {
+    const deleteProduct = () => {
         console.log("Deleting product")
         axios.delete(`http://localhost:8000/api/products/${ product._id }`)
             .then((res) => {
@@ -45,7 +45,7 @@ const SingleProduct = (props) => {
                 </Link>
                 <button
                     className="btn btn-sm btn-outline-danger mx-3"
-                    onClick={ deleteProduct2 }
+                    onClick={ deleteProduct }
                 >
                     Delete
                 </button>

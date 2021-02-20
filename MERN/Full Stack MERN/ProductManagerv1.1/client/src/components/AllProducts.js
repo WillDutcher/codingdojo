@@ -9,6 +9,10 @@ const AllProducts = (props) => {
         console.log("Deleting product")
         console.log(productId)
         axios.delete(`http://localhost:8000/api/products/${ productId }`)
+            .then((res) => {
+                console.log("Logging products:")
+                console.log(props.products)
+            })
             .then((res => {
                 removeFromDom(productId)
             }))

@@ -18,8 +18,10 @@ const Main = () => {
             })
     }, [ loaded ]);
 
+    /******************************** This is how I FINALLY got removeFromDom to work!!! /********************************/
     const removeFromDom = (productId) => {
-        setProducts(products.filter(product => products._id !== productId));
+        const someItems = products.filter(item => item._id !== productId);
+        setProducts(someItems)
     };
 
     return (
