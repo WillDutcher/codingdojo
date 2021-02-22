@@ -1,10 +1,8 @@
 import React from 'react';
 import { Router, Link } from '@reach/router';
 import Main from './views/Main';
-import CreateProduct from './components/CreateProduct';
-import EditProduct from './components/EditProduct';
-import SingleProduct from './components/SingleProduct';
-import AllProducts from './components/AllProducts';
+import Detail from './views/Detail';
+import Update from './views/Update';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -14,9 +12,9 @@ function App() {
     return (
       <div>
         <h1>
-          Route Not Found.<br/>
-          <Link to="/products">Go Home</Link>
+          Error 404 - Route Not Found<br/>
         </h1>
+          <h3 className="mt-5"><Link className="text-success" to="/products">Go Home</Link></h3>
       </div>
     )
   }
@@ -25,10 +23,8 @@ function App() {
     <div className="App">
       <Router>
         <Main path="/products" />
-        {/* <AllProducts path="/products" /> */}
-        <CreateProduct path="/products/new" />
-        <SingleProduct path="/products/:id" />
-        <EditProduct path="/products/:id/edit" />
+        <Detail path="/products/:id" />
+        <Update path="/products/:id/edit" />
         <NotFound default />
       </Router>
     </div>

@@ -1,22 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const PersonForm = () => {
+const PersonForm = (props) => {
     // keep track of what is being typed via useState hook
-    const [ firstName, setFirstName ] = useState("");
-    const [ lastName, setLastName ] = useState("");
+    const { initialFirstName, initialLastName, onSubmitProp } = props;      // See App.js to see these passed in
+    const [ firstName, setFirstName ] = useState(initialFirstName);         // Use the value of whatever the initial first name is (for update or new!)
+    const [ lastName, setLastName ] = useState(initialLastName);            // Use the value of whatever the initial last name is (for update or new!)
     
     const onSubmitHandler = (e) => {                                        // handler when form is submitted
-        e.preventDefault();                                                 // prevent default behavior on submit
-        axios.post('http://localhost:8000/api/people', {                    // make a post request to create a new person
-            firstName,
-            lastName
-        })
-            .then(res => console.log(res))
-            .catch(err => console.log(err))
-        setFirstName("");
-        setLastName("");
-
+        //e.preventDefault();                                                 // prevent default behavior on submit; NOTE api is now reached within Main.js!
+        onSubmitProp({ firstName, lastName });                              // See Main.js; this will either be createPerson for PersonForm & updatePerson for Update
     }
 
     return (
@@ -27,8 +20,8 @@ const PersonForm = () => {
                     className="pl-1"
                     id="firstName"
                     type="text"
-                    onChange={ (e) => setFirstName(e.target.value) }      // onChange to update firstName
-                    value={ firstName }
+                    onChange={ (e) => setFirstName(e.target.value) }        // onChange to update firstName
+                    value={ firstName }                                     // whatever current value of firstName is
                 />
             </p>
             <p>
@@ -37,8 +30,8 @@ const PersonForm = () => {
                     className="pl-1"
                     id="lastName"
                     type="text"
-                    onChange={ (e) => setLastName(e.target.value) }       // onChange to update lastName
-                    value={ lastName }
+                    onChange={ (e) => setLastName(e.target.value) }         // onChange to update lastName
+                    value={ lastName }                                      // whatever current value of lastName is
                 />
             </p>
             <input type="submit" className="btn btn-primary py-1 px-3" />

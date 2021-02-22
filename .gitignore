@@ -1,3 +1,9 @@
 node_modules/
 **/React/
 !**/React/Zipped/
+./MERN/'Full Stack MERN'/'Boat Project'/client/node_modules/
+./MERN/'Full Stack MERN'/'Boat Project'/server/node_modules/
+./MERN/'Full Stack MERN'/myNewProject/node_modules/
+./MERN/'Full Stack MERN'/myNewProject/client/node_modules/
+./MERN/'Full Stack MERN'/ProductManager/node_modules/
+./MERN/'Full Stack MERN'/ProductManager/client/node_modules/

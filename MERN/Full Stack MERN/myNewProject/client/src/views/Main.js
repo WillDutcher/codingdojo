@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios'
 import PersonForm from '../components/PersonForm';
 import PersonList from '../components/PersonList';
-import axios from 'axios';
 
 const Main = () => {
     const [ people, setPeople ] = useState([]);
@@ -10,37 +10,40 @@ const Main = () => {
     useEffect(() => {
         axios.get('http://localhost:8000/api/people')
             .then(res => {
-                console.log(res.data);
-                setPeople(res.data);
-                setLoaded(true);
-            });
-    }, [loaded])
+                console.log(res.data)
+                setPeople(res.data)
+                setLoaded(true)
+            })
+    }, [loaded]);
+
+    const removeFromDom = (personId) => {
+        setPeople(people.filter(person => person._id !== personId));
+    };
+
+    const createPerson = (person) => {                                          // Creates a new person
+        axios.post('http://localhost:8000/api/people', person)                  // Axios post method that takes in person object = ({ firstName, lastName })
+            .then(res => {
+                setPeople([ ...people, res.data ]);                             // setPeople spreading out people object and appending current person object = res.data!
+            })
+    };
     
     return (
         <div>
-            <PersonForm />
+            <PersonForm
+                onSubmitProp={ createPerson }
+                initialFirstName=""
+                initialLastName=""
+            />
             <hr/>
             <u><h2>List of People</h2></u>
-            { loaded && <PersonList people={ people } /> }
+            { loaded &&
+                <PersonList
+                    people={ people }
+                    removeFromDom={ removeFromDom }
+                />
+            }
         </div>
     );
 };
 
 export default Main;
-
-
-// const Main = () => {
-//     const [ message, setMessage ] = useState("Loading...")
-//     useEffect(() => {
-//         axios.get('http://localhost:8000/api')
-//             .then(res => setMessage(res.data.message))
-//     }, []);
-//     return (
-//         <div>
-//             {/* <h2>Message from the backend: { message }</h2> */}
-//             <PersonForm />
-//         </div>
-//     );
-// };
-
-// export default Main;

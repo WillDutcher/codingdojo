@@ -34,12 +34,19 @@ const updatePerson = (req, res) => {
         .catch(err => res.json(err));
 };
 
+const deletePerson = (req, res) => {
+    Person.deleteOne({ _id: req.params.id })
+        .then(deleteConfirmation => res.json(deleteConfirmation))
+        .catch(err => res.json(err))
+};
+
 module.exports = {
     index,
     createPerson,
     getAllPeople,
     getPerson,
-    updatePerson
+    updatePerson,
+    deletePerson
 }
 
 
