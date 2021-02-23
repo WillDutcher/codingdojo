@@ -1,23 +1,5 @@
 const Author = require('../models/authors.model');
 
-const index = (req, res) => {
-    res.json({
-        message: "You are successfully reaching out to the authors.controller.js file."
-    });
-};
-
-const getAllAuthors = (req, res) => {
-    Author.find()
-        .then((allAuthors) => {
-            console.log(allAuthors);
-            res.json(allAuthors);
-        })
-        .catch((err) => {
-            console.log(`Error in getAllAuthors: ${ err }`);
-            res.status(400).json(err);
-        })
-};
-
 const addAuthor = (req, res) => {
     Author.create(req.body)
         .then((authorAdded) => {
@@ -26,6 +8,18 @@ const addAuthor = (req, res) => {
         })
         .catch((err) => {
             console.log(`Error in addAuthor: ${ err }`);
+            res.status(400).json(err);
+        })
+};
+
+const getAllAuthors = (req, res) => {
+    Author.find({}).sort({name: 1})
+        .then((allAuthors) => {
+            console.log(allAuthors);
+            res.json(allAuthors);
+        })
+        .catch((err) => {
+            console.log(`Error in getAllAuthors: ${ err }`);
             res.status(400).json(err);
         })
 };
@@ -79,9 +73,8 @@ const deleteAuthor = (req, res) => {
 */
 
 module.exports = {
-    index,
-    getAllAuthors,
     addAuthor,
+    getAllAuthors,
     getSingleAuthor,
     editAuthor,
     deleteAuthor

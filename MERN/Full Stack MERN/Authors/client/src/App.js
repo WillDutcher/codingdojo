@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Router, Redirect } from '@reach/router';
+import AuthorList from './views/AuthorList';
+import Main from './views/Main';
+import Update from './views/Update';
+import PageNotFound from './views/PageNotFound';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Favorite Authors</h1>
+      <Router>
+        <Redirect from="/" to="/authors" noThrow="true" />
+        <Main path="/authors/new" />
+        <AuthorList path="/authors" />
+        <Update path="/authors/:id/edit" />
+        <PageNotFound default />
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
