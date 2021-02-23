@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
+
 const BookSchema = new mongoose.Schema({
     title: {
-        tyhpe: String,
+        type: String,
         required: [ true, "Title is required" ]
     },
     numberOfPages: {
