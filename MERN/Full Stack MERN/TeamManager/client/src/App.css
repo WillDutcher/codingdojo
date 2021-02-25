@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+/* App.js */
+
+.App {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 2em 4em;
+  background-color: white;
+}
+
+#manage {
+    padding: 16px;
+}
+
+#add-list {
+    min-height: 100vh;
+    border: 3px solid black;
+    padding: 8px 32px;
+    margin: 16px 0;
+}
+
+.nav-links {
+  font-size: 2em;
+}
+
+.router {
+  font-size: 1.25em;
+}
+
+
+
+
+/* Forms */
+
+form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#player-form {
+    border: 2px solid black;
+}
+
+label,
+input,
+select {
+  font-size: 1.25em !important;
+}
+
+.error-text {
+    font-size: .8em;
+}
+
+table {
+    border: 3px solid black !important;
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+button,
+.btn-resize {
+  width: 125px;
+  font-size: 1em !important;
+}
