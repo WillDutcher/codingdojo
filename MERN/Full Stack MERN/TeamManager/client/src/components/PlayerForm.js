@@ -5,7 +5,27 @@ const PlayerForm = (props) => {
     const { initialName, initialPosition, onSubmitProp, initialErrors } = props;
     const [ name, setName ] = useState(initialName);
     const [ position, setPosition ] = useState(initialPosition ? initialPosition : "QB");
-    // const [ errors, setErrors ] = useState({});
+<div>
+                <label htmlFor="petName">Pet Name:
+                    { initialErrors && (
+                        <>
+                            { initialErrors.petName ?
+                                <span className="ml-3 text-danger">{ initialErrors.petName.message }</span>
+                                : null
+                            }
+                        </>
+                    )}
+                </label>
+                <input
+                    id="petName"
+                    name="petName"
+                    className=""
+                    type="text"
+                    placeholder="Enter pet name"
+                    onChange={ (e) => setPetName(e.target.value) }
+                    value={ petName }
+                />
+            </div>    // const [ errors, setErrors ] = useState({});
 
     const onSubmitHandler = (e) => {
         e.preventDefault();

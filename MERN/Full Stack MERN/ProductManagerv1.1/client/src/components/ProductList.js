@@ -7,6 +7,8 @@ import DetailsButton from './DetailsButton';
 
 const ProductList = (props) => {
     const [ products, setProducts ] = useState([]);             // Set array of products
+    const [ disable, setDisable ] = useState(false);
+    let [ likes, setLikes ] = useState(0);
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/products`)         // Access API with GET request
@@ -23,29 +25,37 @@ const ProductList = (props) => {
         setProducts(products.filter(product => product._id !== productId))  // Create filtered list minus that product, above
     };
 
+    const disableButton = () => {
+        console.log("Clicked");
+        setLikes(likes += 1);
+        setDisable(true)
+    }
+
     return (
         <div>
             <h2>All Products</h2>
+            <h3>Likes: { likes }</h3>
             {
                 products.map(( product, idx ) => {
                     return (
                         <div key={ idx }>
-                        <div className="d-flex justify-content-center align-items-center m-3">
-                            <h5 className="product-title mb-0">{`${product.title}`}</h5>
-                            <DetailsButton
-                                productId={ product._id }
-                            />
-                            <Link
-                                to={`/products/${product._id}/edit`}
-                                className="link-btn btn btn-sm btn-info mx-3"
-                            >
-                                Edit
-                            </Link>
-                            <DeleteButton
-                                productId={ product._id }
-                                successCallback={ () => removeFromDom(product._id) }
-                            />
-                        </div>
+                            <div className="d-flex justify-content-center align-items-center m-3">
+                                <h5 className="product-title mb-0">{`${product.title}`}</h5>
+                                <DetailsButton
+                                    productId={ product._id }
+                                />
+                                <Link
+                                    to={`/products/${product._id}/edit`}
+                                    className="link-btn btn btn-sm btn-info mx-3"
+                                >
+                                    Edit
+                                </Link>
+                                <DeleteButton
+                                    productId={ product._id }
+                                    successCallback={ () => removeFromDom(product._id) }
+                                />
+                                <button disabled={ disable } onClick={ disableButton }>Likes: { likes }</button>
+                            </div>
                     </div>
                     )
                 })

@@ -16,9 +16,11 @@ const Main = () => {
             })
     }, [ loaded ]);                                                             // only call useEffect if loaded status changes
 
+    /* This should still work if I remove this part...right?
     const removeFromDom = (productId) => {                                      // remove object from DOM
         setProducts(products.filter( product => product._id !== productId ))    // Create new filter of all products minus that deleted product
     };
+    */
 
     const createProduct = (product) => {                                        // Create a new product passing in the product object
         axios.post(`http://localhost:8000/api/products`, product)               // Call createProduct API and give it passed in product object
@@ -50,7 +52,7 @@ const Main = () => {
                 loaded &&
                     <ProductList
                         products={ products }
-                        removeFromDom={ removeFromDom }
+                        // removeFromDom={ removeFromDom }
                     />
             }
         </div>

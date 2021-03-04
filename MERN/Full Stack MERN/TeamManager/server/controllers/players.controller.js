@@ -1,7 +1,7 @@
 const Player = require('../models/players.model');
 
 const getAllPlayers = (req, res) => {
-    Player.find().sort({ name: "ascending" })
+    Player.find({}).sort({ position: "ascending", name: "ascending" })
         .then((allPlayers) => {
             console.log(allPlayers);
             res.json(allPlayers);
