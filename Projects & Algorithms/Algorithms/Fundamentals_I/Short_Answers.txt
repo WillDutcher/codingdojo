@@ -1,0 +1,55 @@
+Short Answer Questions
+
+What is source code?
+	A collection of commands and variables and declarations that make up a computer program/application.
+
+What makes computers so "smart", anyway?
+	They are incapable of fallacy. They're only as smart/fallible as the developer programming them. They do EXACTLY what you tell them to, or error out if unable.
+
+What is the purpose of a programming language?
+	They allow for code to be written in streamlined and structured way that follows a specific syntax.
+
+What are three examples of programming langauges? Why are there so many of these?
+	Python, JavaScript, Java
+	I have to think it's a little bit utility, a little bit ego (e.g. "I can do it better") and a lot of picking the right tool for the job.
+
+What is a variable? Why are variables useful?
+	They are references to values in lieu of hard-coding values. These change often (or *can* change, in my cases) so they need to be flexible.
+	They're useful because you don't want to cause memory issues with extraneous code filling your computer that it has to keep track of.
+
+What is the difference between a single-equals (=) and a double-equals (==)?
+	A single equal ASSIGNS a value (e.g. x = 10) whereas a double equals checks for equality of the value and returns boolean (e.g. x IS EQUAL TO 10?).
+
+What is the difference between a double-equals (==) and a triple-equals (===)?
+	See above re: double equal. A triple equal checks for the value AND the type and returns boolean (e.g. x IS EQUAL TO 10 AND IS A TYPE NUMBER?).
+
+Why does the developer console exist?
+	Debugging. We'd be lost without it.
+
+When we talk about “conditional” statements, what does that mean? What is an example?
+	Typically these are 'IF' statements and ternary operators. They check a comparison between two values and return a boolean. If x, do this, if y, do this, etc.
+
+Why would we want FOR or WHILE loops in our source code?
+	These check for a boolean value and return whatever is expected if a certain condition is met. They make running through loops MUCH faster than x-number of IF statements.
+
+When would you use a WHILE loop, instead of a FOR loop?
+	A WHILE loop is when you have a value that may have a random or variable value whereas a FOR LOOP, you know exactly when you want to break out of it.
+
+What is a function? Why would we use functions?
+	A function is a piece of code that can take in parameters (arguments) and return a value to be used later (potentially for more functions).
+	We would use functions to avoid having to replicate a script time and time again; use it when something must be run multiple times with variable arguments/parameters.
+
+How many values can you receive back from a function? How many values can you send in?
+	Technically, you should only be sending back a single value in a return...but you can return multiple values in an array if wrapped in array or object.
+	The number of values you can send in to a function probably has an upper limit re: memory issues, but that was never explained, so I'd assume for sake of this question, anywhere from 0 to as many as you like.
+
+What is an array? How many values does it hold?
+	An array is a collection of values. They can all be numbers, strings, booleans, etc. or a mixture of them.
+	Like the above, I'm unsure if an array actually has an upper limit, so my assumption is that it's however many are necessary, though I believe there'd be memory implications.
+
+What is a T-diagram and why should I know how to use one?
+	A T-diagram is a tool to help track variables and their values. You should know how to use one to be able to 'follow' and/or 'read' code and understand how things change, migrate, and process.
+
+What are the two ways to comment JS code? When would you use one versus the other?
+	You can comment code using // if it's a single line, or /* */ for multi-line code.
+	Single line // comments can be placed at the end of any working code and still run. Multi-line /* */ can be used for long/difficult code explanations or to make comments/code more readable/pretty.
