@@ -78,7 +78,8 @@ function filterRange(arr, min, max) {                           // This works, a
                 arr[betweenIndex] = arr[j];                     // set first value to the first number between min and max
                 betweenIndex++;                                 // increment count
             }
-            arr.length = arr.length-(max-min-1);                // Cut length by one, returning [1,2]
+            arr.length = arr.length-(max-min-1);
+            console.log("LEN: " + arr.length)                // Cut length by one, returning [1,2]
             i--                                                 // Decrement i by one to account for newly-formed array and check outer for loop again
         }
     }
