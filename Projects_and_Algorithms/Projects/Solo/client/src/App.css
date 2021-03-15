@@ -1,38 +1,87 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  /* text-align: center; */
+  background-color: #FEDC89;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.debug {
+  border: 2px solid red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  min-height: 100px;
+  color: #F36A6C;
+}
+
+form {
+  background-color: white;;
+  margin: auto;
+  width: 800px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+h5 {
+  text-decoration: underline;
+  line-height: 2em;
+}
+
+hr.fancy {
+    overflow: visible;
+    height: 30px;
+    margin: 0 20px;
+    border-style: solid;
+    border-color: #F36A6C;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.fancy:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin: -31px 0 0 0;
+    border-style: solid;
+    border-color: #F36A6C;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+#non-pizza-items, #pizza-details {
+  padding: 20px 0;
+}
+
+label {
+  width: 120px;
+  text-align: left;
+}
+
+#non-pizza-items > div > label,
+#pizza-basics > div > label {
+  text-align: right;
+  margin-right: 10px;
+}
+
+#pizza-details {
+  align-content: center;
+  padding-top: 0;
+}
+
+select {
+  width: 100px;
+  text-align: left;
+}
+
+input {
+  margin-left: 110px;
+  margin-right: 10px;
+}
+
+#pizza-details > *,
+#non-pizza-items > * {
+  width: 300px;
+}
+
+#addToOrder { 
+  display: block;
+  margin: 0 auto;
 }

@@ -1,0 +1,26 @@
+Coding Dojo
+Solo Project - Paolo's Pizzaria
+
+I want to create a simple web application for a pizza restaurant. Ideally, an MVP would consist of:
+
+Server: 
+	- Backend consist of MOngoose, Node, Express
+	- Database consists of order information including:
+		Order:
+			Pizza:
+				Size, Crust, Cheese, Sauce, Toppings
+			Sides:
+				Breadsticks, Cheesesticks
+			Desserts:
+				Tiramasu, Canoli
+			Drinks:
+				Selection of brand-name beverages
+Client:
+	Create Order form with menu items described above
+	Edit order
+	Review order
+	Delete order
+
+Challenges will include:
+	Adding a User registration/login to front/back end
+	Adding ability to save a favorite order to the user
