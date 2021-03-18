@@ -1,5 +1,4 @@
 .App {
-  /* text-align: center; */
   background-color: #FEDC89;
   min-height: 100vh;
 }
@@ -8,15 +7,24 @@
   border: 2px solid red;
 }
 
+/***************   HEADER   ***************/
+
 .header {
   min-height: 100px;
   color: #F36A6C;
 }
 
+li {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/***************    FORM    ***************/
+
 form {
   background-color: white;;
   margin: auto;
-  width: 800px;
+  width: 600px;
   border-radius: 20px;
   margin-bottom: 30px;
 }
@@ -57,8 +65,13 @@ label {
 
 #non-pizza-items > div > label,
 #pizza-basics > div > label {
+  width: 80px;
   text-align: right;
   margin-right: 10px;
+}
+
+label#drink-label {
+  width: 50px !important;
 }
 
 #pizza-details {
@@ -71,8 +84,12 @@ select {
   text-align: left;
 }
 
+select#drink {
+  margin-right: 10px;
+}
+
 input {
-  margin-left: 110px;
+  margin-left: 50px;
   margin-right: 10px;
 }
 

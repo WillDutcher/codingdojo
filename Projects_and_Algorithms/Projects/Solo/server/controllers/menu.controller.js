@@ -22,6 +22,7 @@ const getAllOrders = (req, res) => {
 
 const createOrder = (req, res) => {
     // Create an order
+    console.log(req.body);
     Menu.create(req.body)
         .then((newOrder) => {
             console.log(newOrder);

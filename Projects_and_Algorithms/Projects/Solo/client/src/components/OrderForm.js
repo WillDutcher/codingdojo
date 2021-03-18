@@ -45,19 +45,17 @@ const OrderForm = (props) => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        console.log("Button clicked!"); /*                FIX THIS AND ERROR HANDLING BELOW!               */
-        alert(size)
-        // onSubmitProp({
-        //     size,
-        //     crust,
-        //     cheese,
-        //     sauce,
-        //     pepperoni, sausage, ham, chicken, bacon, impossibleMeat,
-        //     onion, mushroom, greenPepper, olive, jalapeno, pineapple,
-        //     breadsticks, cheesesticks,
-        //     tiramasu, canoli,
-        //     drink
-        // });
+        onSubmitProp({
+            size,
+            crust,
+            cheese,
+            sauce,
+            pepperoni, sausage, ham, chicken, bacon, impossibleMeat,
+            onion, mushroom, greenPepper, olive, jalapeno, pineapple,
+            breadsticks, cheesesticks,
+            tiramasu, canoli,
+            drink
+        });
     };
 
     return (
@@ -139,12 +137,14 @@ const OrderForm = (props) => {
                     <div id="pizza-basics" className="d-flex flex-column justify-content-between">
                         <h5 className="text-center">Pizza Basics</h5>
                         <div id="size-div">
-                            {/* <>
-                                { initialErrors.size ?
-                                    <span className="text-danger">{ initialErrors.size.message }</span>
-                                    : null
-                                }
-                            </> */}
+                            { initialErrors && (
+                                <>
+                                    { initialErrors.size ?
+                                        <span className="text-danger">{ initialErrors.size.message }</span>
+                                        : null
+                                    }
+                                </>
+                            )}
                             <label id="size-label" className="" htmlFor="">Size</label>
                             <select
                                 id="size"
@@ -161,12 +161,14 @@ const OrderForm = (props) => {
                             </select>
                         </div>
                         <div id="crust-div">
-                            {/* <>
-                                { initialErrors.crust ?
-                                    <span className="text-danger">{ initialErrors.crust.message }</span>
-                                    : null
-                                }
-                            </> */}
+                            { initialErrors && (
+                                <>
+                                    { initialErrors.crust ?
+                                        <span className="text-danger">{ initialErrors.crust.message }</span>
+                                        : null
+                                    }
+                                </>
+                            )}
                             <label id="crust-label" className="" htmlFor="crust">Crust</label>
                             <select
                                 id="crust"
@@ -175,19 +177,21 @@ const OrderForm = (props) => {
                                 onChange={ (e) => setCrust(e.target.value) }
                                 value={ crust }
                             >
-                                <option value="light">Light</option>
                                 <option value="normal">Normal</option>
-                                <option value="extra">Extra</option>
-                                <option value="double">Double</option>
+                                <option value="thin">Thin</option>
+                                <option value="pan">Pan</option>
+                                <option value="stuffed">Stuffed</option>
                             </select>
                         </div>
                         <div id="sauce-div">
-                            {/* <>
-                                { initialErrors.sauce ?
-                                    <span className="text-danger">{ initialErrors.sauce.message }</span>
-                                    : null
-                                }
-                            </> */}
+                            { initialErrors && (
+                                <>
+                                    { initialErrors.sauce ?
+                                        <span className="text-danger">{ initialErrors.sauce.message }</span>
+                                        : null
+                                    }
+                                </>
+                            )}
                             <label id="sauce-label" className="" htmlFor="sauce">Sauce</label>
                             <select
                                 id="sauce"
@@ -203,12 +207,14 @@ const OrderForm = (props) => {
                             </select>
                         </div>
                         <div id="cheese-div">
-                            {/* <>
-                                { initialErrors.cheese ?
-                                    <span className="text-danger">{ initialErrors.cheese.message }</span>
-                                    : null
-                                }
-                            </> */}
+                            { initialErrors && (
+                                <>
+                                    { initialErrors.cheese ?
+                                        <span className="text-danger">{ initialErrors.cheese.message }</span>
+                                        : null
+                                    }
+                                </>
+                            )}
                             <label id="cheese-label" className="" htmlFor="cheese">Cheese</label>
                             <select
                                 id="cheese"
