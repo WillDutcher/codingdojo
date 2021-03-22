@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, navigate } from '@reach/router';
 import axios from 'axios';
+import Cookies from 'js-cookie';
 import icon from '../images/pp_logo.png';
 
 const Header = () => {
@@ -32,6 +33,8 @@ const Header = () => {
 
     const logout = (e) => {
         e.preventDefault();
+        console.log("Clicked logout")
+        Cookies.remove('userLoginToken')
         axios.post('http://localhost:8000/api/user/logout', {},
         {
             withCredentials: true

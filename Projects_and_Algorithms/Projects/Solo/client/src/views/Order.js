@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { navigate } from '@reach/router';
 import OrderForm from '../components/OrderForm';
+import Cookies from 'js-cookie';
 
 const Order = (props) => {
     const [ errors, setErrors ] = useState();
@@ -53,8 +54,6 @@ const Order = (props) => {
         axios.post(`http://localhost:8000/api/menu`, orderObj,
         { withCredentials: true })
             .then((res) => {
-                console.log("Order successful!");
-                console.log("res:")
                 console.log(res);
                 navigate('/menu/order'); // This is wrong, change it
             })

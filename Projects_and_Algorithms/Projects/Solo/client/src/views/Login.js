@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { navigate } from '@reach/router';
+import Cookies from 'js-cookie';
 
 const Login = (props) => {
     const [ email, setEmail ] = useState("");
@@ -9,6 +10,7 @@ const Login = (props) => {
 
     const login = (e) => {
         e.preventDefault();
+        
         axios.post("http://localhost:8000/api/user/login", {
             email,
             password
