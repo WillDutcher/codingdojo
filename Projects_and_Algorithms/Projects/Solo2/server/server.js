@@ -16,6 +16,6 @@ app.use(cookieParser());
 require('./config/mongoose.config')(process.env.DB_NAME);
 
 require('./routes/menu.route')(app);
-require('./routes/user.route')(app);
+// require('./routes/user.route')(app);
 
 app.listen(process.env.DB_PORT, () => console.log(`Listening on port ${ process.env.DB_PORT }`));

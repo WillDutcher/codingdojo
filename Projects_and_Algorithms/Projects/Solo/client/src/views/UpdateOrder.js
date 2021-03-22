@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link, navigate } from '@reach/router';
-import OrderForm from '../components/OrderForm';
+// import { Link, navigate } from '@reach/router';
+// import OrderForm from '../components/OrderForm';
 
 const UpdateOrder = (props) => {
     const { id } = props;
@@ -33,12 +33,12 @@ const UpdateOrder = (props) => {
     const [ tiramasu, setTiramasu ] = useState();
     const [ canoli, setCanoli ] = useState();
     // const [ drinks, setDrinks ] = useState(false);
-    const [ drink, setDrink ] = useState();
+    const [ drinks, setDrinks ] = useState();
     const [ loaded, setLoaded ] = useState(false);
     const [ errors, setErrors ] = useState();
 
     useEffect(()=> {
-        axios.get(`http://localhost:8000/api/orders/${ id }`)
+        axios.get(`http://localhost:8000/api/menu/${ id }`)
             .then((res) => {
                 const currentOrder = res.data;
                 console.log(currentOrder);
@@ -62,7 +62,7 @@ const UpdateOrder = (props) => {
                 setCheesesticks(currentOrder.cheesesticks);
                 setTiramasu(currentOrder.tiramasu);
                 setCanoli(currentOrder.canoli);
-                setDrink(currentOrder.drink);
+                setDrink(currentOrder.drinks);
                 setLoaded(true);
             })
             .catch((err) => {

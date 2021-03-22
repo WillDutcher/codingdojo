@@ -7,7 +7,7 @@ const index = (req, res) =>{
     });
 };
 
-const getAllOrders = (req, res) => {
+const getAll = (req, res) => {
     // Get all
     Menu.find()
         .then((allOrders) => {
@@ -15,13 +15,13 @@ const getAllOrders = (req, res) => {
             res.json(allOrders);
         })
         .catch((err) => {
-            console.log(`Error in getAllOrders: ${ err }`);
+            console.log(`Error in getAll: ${ err }`);
             res.status(400).json(err);
         })
 }
 
-const createOrder = (req, res) => {
-    // Create an order
+const create = (req, res) => {
+    // Create an order from menu
     console.log(req.body);
     Menu.create(req.body)
         .then((newOrder) => {
@@ -34,8 +34,8 @@ const createOrder = (req, res) => {
         })
 };
 
-const getOrder = (req, res) => {
-    // Get single order
+const getOne = (req, res) => {
+    // Get single menu item
     console.log(req.params.id);
     Menu.findById(req.params.id)
         .then((singleOrder) => {
@@ -48,25 +48,25 @@ const getOrder = (req, res) => {
         })
 };
 
-const editOrder = (req, res) => {
-    // Edit an order
+const update = (req, res) => {
+    // update an order
     console.log(req.params.id);
     console.log(req.body);
     Menu.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
         runValidators: true
     })
-        .then((editedOrder) => {
-            console.log(editedOrder);
-            res.json(editedOrder);
+        .then((updatedOrder) => {
+            console.log(updatedOrder);
+            res.json(updatedOrder);
         })
         .catch((err) => {
-            console.log(`Error in editOrder: ${ err }`);
+            console.log(`Error in update: ${ err }`);
             res.status(400).json(err);
         })
 };
 
-const deleteOrder = (req, res) => {
+const remove = (req, res) => {
     // Delete an order
     console.log(req.params.id);
     Menu.findByIdAndRemove(req.params.id)
@@ -80,11 +80,54 @@ const deleteOrder = (req, res) => {
         })
 };
 
+const fave = (req, res) => {
+    let id = '6057df4e9494781344bc4221';
+    Menu.findById(id)
+    .then((faveOrder) => {
+            console.log(faveOrder);
+            res.json(faveOrder);
+        })
+        .catch((err) => {
+            console.log(`Error in getOrder: ${ err }`);
+            res.status(400).json(err);
+        })
+    // Load fave pizza
+    // const fave = {
+    //     pizza: {
+    //         size: "Large",
+    //         crust: "Pan",
+    //         cheese: "Extra",
+    //         sauce: "Normal",
+    //         toppings: {
+    //             protein: {
+    //                 "ham": true,
+    //             },
+    //             veggies: {
+    //                 "onion": true,
+    //                 "greenPepper": true
+    //             }
+    //         }
+    //     }
+    // }
+
+    // console.log(fave);
+    // Menu.create(fave)
+    //     .then((faveOrder) => {
+    //         console.log(faveOrder);
+    //         res.json(faveOrder);
+    //     })
+    //     .catch((err) => {
+    //         console.log(`Error in faveOrder: ${ err }`);
+    //         res.status(400).json(err);
+    //     })
+};
+
 module.exports= {
     index,
-    getAllOrders,
-    createOrder,
-    getOrder,
-    editOrder,
-    deleteOrder
+    getAll,
+    create,
+    getOne,
+    update,
+    remove,
+    fave
 };

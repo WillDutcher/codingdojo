@@ -76,30 +76,6 @@ const MenuSchema = new mongoose.Schema({
                 }
             }
         }
-    },
-    sides: {
-        breadsticks: {
-            type: Boolean,
-            default: false
-        },
-        cheesesticks: {
-            type: Boolean,
-            default: false
-        }
-    },
-    desserts: {
-        tiramasu: {
-            type: Boolean,
-            default: false
-        },
-        canoli: {
-            type: Boolean,
-            default: false
-        }
-    },
-    drinks: {
-        type: String,
-        enum: [ '-', 'Coke', 'Diet Coke', 'Dr. Pepper', 'Diet Dr. Pepper', 'Sprite', 'Fanta Orange', 'Barq\'s Root Beer' ]
     }
 }, { timestamps: true });
 

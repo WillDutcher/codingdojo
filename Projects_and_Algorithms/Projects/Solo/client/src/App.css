@@ -19,6 +19,27 @@ li {
   font-weight: 500;
 }
 
+/***************    CARD    ***************/
+.card {
+  width: 350px;
+}
+
+.card img {
+  max-width: 300px;
+  /* padding: 20px; */
+  margin: 20px auto 0;
+}
+
+.card-body {
+  flex: 1;
+}
+
+.card button {
+  margin: 0 auto;
+  width: 175px;
+}
+
+
 /***************    FORM    ***************/
 
 form {
@@ -70,7 +91,7 @@ label {
   margin-right: 10px;
 }
 
-label#drink-label {
+label#drinks-label {
   width: 50px !important;
 }
 
@@ -84,7 +105,7 @@ select {
   text-align: left;
 }
 
-select#drink {
+select#drinks {
   margin-right: 10px;
 }
 

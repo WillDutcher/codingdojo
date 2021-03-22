@@ -1,47 +1,47 @@
 import React, { useState } from 'react';
 
 const OrderForm = (props) => {
-    const { initialSize,
-            initialCrust,
-            initialCheese,
-            initialSauce,
+    const { initialSize, initialCrust, initialCheese, initialSauce,
             initialPepperoni, initialSausage, initialHam, initialChicken, initialBacon, initialImpossibleMeat,
             initialOnion, initialMushroom, initialGreenPepper, initialOlive, initialJalapeno, initialPineapple,
             initialBreadsticks, initialCheesesticks,
             initialTiramasu, initialCanoli,
-            initialDrink,
+            initialDrinks,
             initialErrors,
             onSubmitProp } =  props;
+    
+    /* pizza */
+        const [ size, setSize ] = useState(initialSize);
+        const [ crust, setCrust ] = useState(initialCrust);
+        const [ cheese, setCheese ] = useState(initialCheese);
+        const [ sauce, setSauce ] = useState(initialSauce);
 
-    // const [ order, setOrder ] = useState(true);
+    /* toppings */
+        /* protein */
+            const [ pepperoni, setPepperoni ] = useState(initialPepperoni);
+            const [ sausage, setSausage ] = useState(initialSausage);
+            const [ ham, setHam ] = useState(initialHam);
+            const [ chicken, setChicken ] = useState(initialChicken);
+            const [ bacon, setBacon ] = useState(initialBacon);
+            const [ impossibleMeat, setImpossibleMeat ] = useState(initialImpossibleMeat);
+        /* veggies */
+            const [ onion, setOnion ] = useState(initialOnion);
+            const [ mushroom, setMushroom ] = useState(initialMushroom);
+            const [ greenPepper, setGreenPepper ] = useState(initialGreenPepper);
+            const [ olive, setOlive ] = useState(initialOlive);
+            const [ jalapeno, setJalapeno ] = useState(initialJalapeno);
+            const [ pineapple, setPineapple ] = useState(initialPineapple);
+    
+    /* sides */
+        const [ breadsticks, setBreadsticks ] = useState(initialBreadsticks);
+        const [ cheesesticks, setCheesesticks ] = useState(initialCheesesticks);
+    
+    /* desserts */
+        const [ tiramasu, setTiramasu ] = useState(initialTiramasu);
+        const [ canoli, setCanoli ] = useState(initialCanoli);
 
-    // const [ pizza, setPizza ] =useState(true);
-    const [ size, setSize ] = useState(initialSize);
-    const [ crust, setCrust ] = useState(initialCrust);
-    const [ cheese, setCheese ] = useState(initialCheese);
-    const [ sauce, setSauce ] = useState(initialSauce);
-    // const [ meat, setMeat ] = useState(false);
-    const [ pepperoni, setPepperoni ] = useState(initialPepperoni);
-    const [ sausage, setSausage ] = useState(initialSausage);
-    const [ ham, setHam ] = useState(initialHam);
-    const [ chicken, setChicken ] = useState(initialChicken);
-    const [ bacon, setBacon ] = useState(initialBacon);
-    const [ impossibleMeat, setImpossibleMeat ] = useState(initialImpossibleMeat);
-    // const [ veggies, setVeggies ] = useState(false);
-    const [ onion, setOnion ] = useState(initialOnion);
-    const [ mushroom, setMushroom ] = useState(initialMushroom);
-    const [ greenPepper, setGreenPepper ] = useState(initialGreenPepper);
-    const [ olive, setOlive ] = useState(initialOlive);
-    const [ jalapeno, setJalapeno ] = useState(initialJalapeno);
-    const [ pineapple, setPineapple ] = useState(initialPineapple);
-    // const [ sides, setSides ] = useState(false);
-    const [ breadsticks, setBreadsticks ] = useState(initialBreadsticks);
-    const [ cheesesticks, setCheesesticks ] = useState(initialCheesesticks);
-    // const [ desserts, setDesserts ] = useState(false);
-    const [ tiramasu, setTiramasu ] = useState(initialTiramasu);
-    const [ canoli, setCanoli ] = useState(initialCanoli);
-    // const [ drinks, setDrinks ] = useState(false);
-    const [ drink, setDrink ] = useState(initialDrink);
+    /* drinks */
+        const [ drinks, setDrinks ] = useState(initialDrinks);
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
@@ -54,7 +54,7 @@ const OrderForm = (props) => {
             onion, mushroom, greenPepper, olive, jalapeno, pineapple,
             breadsticks, cheesesticks,
             tiramasu, canoli,
-            drink
+            drinks
         });
     };
 
@@ -112,16 +112,17 @@ const OrderForm = (props) => {
                             <label id="canoli-label" className="" htmlFor="canoli">Canoli</label>
                         </div>
                     </div>
-                    <div id="drink">
+                    <div id="s">
                         <h5 className="text-center">Drinks</h5>
-                        <label id="drink-label" className="" htmlFor="drink">Drink</label>
+                        <label id="drinks-label" className="" htmlFor="drinks">Drinks</label>
                         <select
-                            id="drink"
+                            id="drinks"
                             className=""
-                            name="drink"
-                            onChange={ (e) => setDrink(e.target.value) }
-                            value={ drink }
+                            name="drinks"
+                            onChange={ (e) => setDrinks(e.target.value) }
+                            value={ drinks }
                         >
+                            <option value="">-</option>
                             <option value="Coke">Coke</option>
                             <option value="Diet Coke">Diet Coke</option>
                             <option value="Dr. Pepper">Dr. Pepper</option>
@@ -153,11 +154,12 @@ const OrderForm = (props) => {
                                 onChange={ (e) => setSize(e.target.value) }
                                 value={ size }
                             >
-                                <option value="personal">Personal</option>
-                                <option value="small">Small</option>
-                                <option value="medium">Medium</option>
-                                <option value="large">Large</option>
-                                <option value="extraLarge">Extra Large</option>
+                                <option value="">-</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Small">Small</option>
+                                <option value="Medium">Medium</option>
+                                <option value="Large">Large</option>
+                                <option value="Extra Large">Extra Large</option>
                             </select>
                         </div>
                         <div id="crust-div">
@@ -177,10 +179,11 @@ const OrderForm = (props) => {
                                 onChange={ (e) => setCrust(e.target.value) }
                                 value={ crust }
                             >
-                                <option value="normal">Normal</option>
-                                <option value="thin">Thin</option>
-                                <option value="pan">Pan</option>
-                                <option value="stuffed">Stuffed</option>
+                                <option value="">-</option>
+                                <option value="Normal">Normal</option>
+                                <option value="Thin">Thin</option>
+                                <option value="Pan">Pan</option>
+                                <option value="Stuffed">Stuffed</option>
                             </select>
                         </div>
                         <div id="sauce-div">
@@ -200,10 +203,11 @@ const OrderForm = (props) => {
                                 onChange={ (e) => setSauce(e.target.value) }
                                 value={ sauce }
                             >
-                                <option value="light">Light</option>
-                                <option value="normal">Normal</option>
-                                <option value="extra">Extra</option>
-                                <option value="double">Double</option>
+                                <option value="">-</option>
+                                <option value="Light">Light</option>
+                                <option value="Normal">Normal</option>
+                                <option value="Extra">Extra</option>
+                                <option value="Double">Double</option>
                             </select>
                         </div>
                         <div id="cheese-div">
@@ -223,10 +227,11 @@ const OrderForm = (props) => {
                                 onChange={ (e) => setCheese(e.target.value) }
                                 value={ cheese }
                             >
-                                <option value="light">Light</option>
-                                <option value="normal">Normal</option>
-                                <option value="extra">Extra</option>
-                                <option value="double">Double</option>
+                                <option value="">-</option>
+                                <option value="Light">Light</option>
+                                <option value="Normal">Normal</option>
+                                <option value="Extra">Extra</option>
+                                <option value="Double">Double</option>
                             </select>
                         </div>
                     </div>
