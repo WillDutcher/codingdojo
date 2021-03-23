@@ -1,0 +1,616 @@
+<style id="__jsx-2744003040">.gray-background.jsx-2744003040{background:linear-gradient( 180deg, rgba(117,135,153,0.5) 0%, rgba(117,135,153,0) 100% );}.root.jsx-2744003040{background-color:#F0F3F5;}.module-wrapper.jsx-2744003040{margin-top:3.5714285714285716rem;}.root.jsx-2744003040 .mobile-nav{width:100%;position:absolute;}@media screen and (min-width: 54.357142857142854rem){.root.jsx-2744003040 .body{margin-top:2.5714285714285716rem;}.root.jsx-2744003040 .sticky-container{top:-1.1428571428571428rem;}.root.jsx-2744003040 .sticky-nav{width:15.428571428571429rem;padding-top:1.1428571428571428rem;}.root.jsx-2744003040 .body-right-column > *:first-of-type{margin-top:0;}.root.jsx-2744003040 .body-right-column{padding-top:1.1428571428571428rem;position:relative;}.sticky-upvote-positioner.jsx-2744003040{position:absolute;right:0;top:0;}.root.jsx-2744003040 .sticky-upvote{position:absolute;padding-top:2.2857142857142856rem;top:0;}div.jsx-2744003040 .non-mobile-upvote{position:absolute;right:-2.2857142857142856rem;z-index:1;}.root.jsx-2744003040 .body-left-column{z-index:1;}}@media screen and (max-width: 54.285714285714285rem){.root.jsx-2744003040 .guide-details-left-column{display:none;}.root.jsx-2744003040 .body{position:relative;padding-top:81px;}.root.jsx-2744003040 .body-left-column{position:absolute;top:0;width:100%;}.root.jsx-2744003040 .sticky-nav{width:100%;z-index:1;}div.jsx-2744003040 .non-mobile-upvote{display:none;}}</style>
+.gray-background.jsx-2744003040{background:linear-gradient( 180deg, rgba(117,135,153,0.5) 0%, rgba(117,135,153,0) 100% );}.root.jsx-2744003040{background-color:#F0F3F5;}.module-wrapper.jsx-2744003040{margin-top:3.5714285714285716rem;}.root.jsx-2744003040 .mobile-nav{width:100%;position:absolute;}@media screen and (min-width: 54.357142857142854rem){.root.jsx-2744003040 .body{margin-top:2.5714285714285716rem;}.root.jsx-2744003040 .sticky-container{top:-1.1428571428571428rem;}.root.jsx-2744003040 .sticky-nav{width:15.428571428571429rem;padding-top:1.1428571428571428rem;}.root.jsx-2744003040 .body-right-column > *:first-of-type{margin-top:0;}.root.jsx-2744003040 .body-right-column{padding-top:1.1428571428571428rem;position:relative;}.sticky-upvote-positioner.jsx-2744003040{position:absolute;right:0;top:0;}.root.jsx-2744003040 .sticky-upvote{position:absolute;padding-top:2.2857142857142856rem;top:0;}div.jsx-2744003040 .non-mobile-upvote{position:absolute;right:-2.2857142857142856rem;z-index:1;}.root.jsx-2744003040 .body-left-column{z-index:1;}}@media screen and (max-width: 54.285714285714285rem){.root.jsx-2744003040 .guide-details-left-column{display:none;}.root.jsx-2744003040 .body{position:relative;padding-top:81px;}.root.jsx-2744003040 .body-left-column{position:absolute;top:0;width:100%;}.root.jsx-2744003040 .sticky-nav{width:100%;z-index:1;}div.jsx-2744003040 .non-mobile-upvote{display:none;}}
+<style id="__jsx-2744003040">.gray-background.jsx-2744003040{background:linear-gradient( 180deg, rgba(117,135,153,0.5) 0%, rgba(117,135,153,0) 100% );}.root.jsx-2744003040{background-color:#F0F3F5;}.module-wrapper.jsx-2744003040{margin-top:3.5714285714285716rem;}.root.jsx-2744003040 .mobile-nav{width:100%;position:absolute;}@media screen and (min-width: 54.357142857142854rem){.root.jsx-2744003040 .body{margin-top:2.5714285714285716rem;}.root.jsx-2744003040 .sticky-container{top:-1.1428571428571428rem;}.root.jsx-2744003040 .sticky-nav{width:15.428571428571429rem;padding-top:1.1428571428571428rem;}.root.jsx-2744003040 .body-right-column > *:first-of-type{margin-top:0;}.root.jsx-2744003040 .body-right-column{padding-top:1.1428571428571428rem;position:relative;}.sticky-upvote-positioner.jsx-2744003040{position:absolute;right:0;top:0;}.root.jsx-2744003040 .sticky-upvote{position:absolute;padding-top:2.2857142857142856rem;top:0;}div.jsx-2744003040 .non-mobile-upvote{position:absolute;right:-2.2857142857142856rem;z-index:1;}.root.jsx-2744003040 .body-left-column{z-index:1;}}@media screen and (max-width: 54.285714285714285rem){.root.jsx-2744003040 .guide-details-left-column{display:none;}.root.jsx-2744003040 .body{position:relative;padding-top:81px;}.root.jsx-2744003040 .body-left-column{position:absolute;top:0;width:100%;}.root.jsx-2744003040 .sticky-nav{width:100%;z-index:1;}div.jsx-2744003040 .non-mobile-upvote{display:none;}}</style>
+<div class="jsx-2744003040 sticky-upvote-positioner">
+	<div class="sticky sticky-upvote">
+		<div data-ui-upvote="true" class="jsx-4156682952 root non-mobile-upvote">
+			<div class="jsx-4156682952 inner">
+				<div data-css-7dab2f="">
+					<svg aria-label="thumb up icon" viewbox="0 0 24 24" role="img"><path fill-rule="evenodd" d="M9.4 8.5c-.29.072-.788.197-1.42.298A1 1 0 007 8H3a1 1 0 00-1 1v11a1 1 0 001 1h4a1 1 0 00.927-.624c.52.162.811.262.873.324l.3.1c1.6.6 3.4 1.2 5.9 1.2h4.2c1.6 0 2.8-1.2 2.8-2.8v-.3c.3-.3 1-1 1-2.2 0-.7-.1-1.1-.3-1.5l.034-.1c.105-.306.266-.773.266-1.4 0-.627-.16-1.094-.266-1.4a11.768 11.768 0 01-.034-.1l.039-.113c.105-.305.261-.757.261-1.287C23 9.3 21.7 8 20.2 8h-2.035c-.349 0-.596-.352-.523-.693.148-.695.202-1.524.202-2.407 0-1.4-.382-2.145-1.047-2.884A3.11 3.11 0 0014.453.969c-1.422 0-2.375.125-2.375 1.547v.243c.004.73.009 1.869-.178 2.941-.2.9-.529 1.577-1.025 2.05-.261.249-.775.55-1.475.75zM19.2 20c.5 0 .8-.3.8-.8v-.4c0-.71.298-1.002.569-1.268.225-.22.431-.423.431-.832 0-.495-.121-.718-.23-.918-.09-.164-.17-.312-.17-.582 0-.278.086-.45.178-.632.107-.212.222-.44.222-.868 0-.429-.115-.656-.221-.868-.093-.183-.179-.354-.179-.632 0-.33.121-.6.23-.842.09-.198.17-.378.17-.558 0-.4-.4-.8-.8-.8H18c-.844 0-1.488-.44-1.844-.938-.355-.497-.508-1.062-.453-1.859.007-.105.02-.22.035-.357.043-.401.106-.977.106-1.946 0-.867-.263-1.923-1.563-1.923-.148 0-.281.054-.281.223 0 .9 0 1.9-.2 2.8-.2 1.1-.6 2.2-1.6 3.2-.6.6-1.5 1-2.3 1.3-.45.15-1.239.3-1.9.408V18.3l1.5.5c.05 0 .1.025.15.05.05.025.1.05.15.05 1.5.6 2.9 1.1 5.2 1.1h4.2zM6 10H4v9h2v-9z"></path></svg>
+				</div>
+				<p data-ui-upvote-count="true" class="jsx-4156682952">
+					3
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="sticky sticky-upvote">
+	<div data-ui-upvote="true" class="jsx-4156682952 root non-mobile-upvote">
+		<div class="jsx-4156682952 inner">
+			<div data-css-7dab2f="">
+				<svg aria-label="thumb up icon" viewbox="0 0 24 24" role="img"><path fill-rule="evenodd" d="M9.4 8.5c-.29.072-.788.197-1.42.298A1 1 0 007 8H3a1 1 0 00-1 1v11a1 1 0 001 1h4a1 1 0 00.927-.624c.52.162.811.262.873.324l.3.1c1.6.6 3.4 1.2 5.9 1.2h4.2c1.6 0 2.8-1.2 2.8-2.8v-.3c.3-.3 1-1 1-2.2 0-.7-.1-1.1-.3-1.5l.034-.1c.105-.306.266-.773.266-1.4 0-.627-.16-1.094-.266-1.4a11.768 11.768 0 01-.034-.1l.039-.113c.105-.305.261-.757.261-1.287C23 9.3 21.7 8 20.2 8h-2.035c-.349 0-.596-.352-.523-.693.148-.695.202-1.524.202-2.407 0-1.4-.382-2.145-1.047-2.884A3.11 3.11 0 0014.453.969c-1.422 0-2.375.125-2.375 1.547v.243c.004.73.009 1.869-.178 2.941-.2.9-.529 1.577-1.025 2.05-.261.249-.775.55-1.475.75zM19.2 20c.5 0 .8-.3.8-.8v-.4c0-.71.298-1.002.569-1.268.225-.22.431-.423.431-.832 0-.495-.121-.718-.23-.918-.09-.164-.17-.312-.17-.582 0-.278.086-.45.178-.632.107-.212.222-.44.222-.868 0-.429-.115-.656-.221-.868-.093-.183-.179-.354-.179-.632 0-.33.121-.6.23-.842.09-.198.17-.378.17-.558 0-.4-.4-.8-.8-.8H18c-.844 0-1.488-.44-1.844-.938-.355-.497-.508-1.062-.453-1.859.007-.105.02-.22.035-.357.043-.401.106-.977.106-1.946 0-.867-.263-1.923-1.563-1.923-.148 0-.281.054-.281.223 0 .9 0 1.9-.2 2.8-.2 1.1-.6 2.2-1.6 3.2-.6.6-1.5 1-2.3 1.3-.45.15-1.239.3-1.9.408V18.3l1.5.5c.05 0 .1.025.15.05.05.025.1.05.15.05 1.5.6 2.9 1.1 5.2 1.1h4.2zM6 10H4v9h2v-9z"></path></svg>
+			</div>
+			<p data-ui-upvote-count="true" class="jsx-4156682952">
+				3
+			</p>
+		</div>
+	</div>
+</div>
+<div data-ui-upvote="true" class="jsx-4156682952 root non-mobile-upvote">
+	<div class="jsx-4156682952 inner">
+		<div data-css-7dab2f="">
+			<svg aria-label="thumb up icon" viewbox="0 0 24 24" role="img"><path fill-rule="evenodd" d="M9.4 8.5c-.29.072-.788.197-1.42.298A1 1 0 007 8H3a1 1 0 00-1 1v11a1 1 0 001 1h4a1 1 0 00.927-.624c.52.162.811.262.873.324l.3.1c1.6.6 3.4 1.2 5.9 1.2h4.2c1.6 0 2.8-1.2 2.8-2.8v-.3c.3-.3 1-1 1-2.2 0-.7-.1-1.1-.3-1.5l.034-.1c.105-.306.266-.773.266-1.4 0-.627-.16-1.094-.266-1.4a11.768 11.768 0 01-.034-.1l.039-.113c.105-.305.261-.757.261-1.287C23 9.3 21.7 8 20.2 8h-2.035c-.349 0-.596-.352-.523-.693.148-.695.202-1.524.202-2.407 0-1.4-.382-2.145-1.047-2.884A3.11 3.11 0 0014.453.969c-1.422 0-2.375.125-2.375 1.547v.243c.004.73.009 1.869-.178 2.941-.2.9-.529 1.577-1.025 2.05-.261.249-.775.55-1.475.75zM19.2 20c.5 0 .8-.3.8-.8v-.4c0-.71.298-1.002.569-1.268.225-.22.431-.423.431-.832 0-.495-.121-.718-.23-.918-.09-.164-.17-.312-.17-.582 0-.278.086-.45.178-.632.107-.212.222-.44.222-.868 0-.429-.115-.656-.221-.868-.093-.183-.179-.354-.179-.632 0-.33.121-.6.23-.842.09-.198.17-.378.17-.558 0-.4-.4-.8-.8-.8H18c-.844 0-1.488-.44-1.844-.938-.355-.497-.508-1.062-.453-1.859.007-.105.02-.22.035-.357.043-.401.106-.977.106-1.946 0-.867-.263-1.923-1.563-1.923-.148 0-.281.054-.281.223 0 .9 0 1.9-.2 2.8-.2 1.1-.6 2.2-1.6 3.2-.6.6-1.5 1-2.3 1.3-.45.15-1.239.3-1.9.408V18.3l1.5.5c.05 0 .1.025.15.05.05.025.1.05.15.05 1.5.6 2.9 1.1 5.2 1.1h4.2zM6 10H4v9h2v-9z"></path></svg>
+		</div>
+		<p data-ui-upvote-count="true" class="jsx-4156682952">
+			3
+		</p>
+	</div>
+</div>
+<div class="jsx-4156682952 inner">
+	<div data-css-7dab2f="">
+		<svg aria-label="thumb up icon" viewbox="0 0 24 24" role="img"><path fill-rule="evenodd" d="M9.4 8.5c-.29.072-.788.197-1.42.298A1 1 0 007 8H3a1 1 0 00-1 1v11a1 1 0 001 1h4a1 1 0 00.927-.624c.52.162.811.262.873.324l.3.1c1.6.6 3.4 1.2 5.9 1.2h4.2c1.6 0 2.8-1.2 2.8-2.8v-.3c.3-.3 1-1 1-2.2 0-.7-.1-1.1-.3-1.5l.034-.1c.105-.306.266-.773.266-1.4 0-.627-.16-1.094-.266-1.4a11.768 11.768 0 01-.034-.1l.039-.113c.105-.305.261-.757.261-1.287C23 9.3 21.7 8 20.2 8h-2.035c-.349 0-.596-.352-.523-.693.148-.695.202-1.524.202-2.407 0-1.4-.382-2.145-1.047-2.884A3.11 3.11 0 0014.453.969c-1.422 0-2.375.125-2.375 1.547v.243c.004.73.009 1.869-.178 2.941-.2.9-.529 1.577-1.025 2.05-.261.249-.775.55-1.475.75zM19.2 20c.5 0 .8-.3.8-.8v-.4c0-.71.298-1.002.569-1.268.225-.22.431-.423.431-.832 0-.495-.121-.718-.23-.918-.09-.164-.17-.312-.17-.582 0-.278.086-.45.178-.632.107-.212.222-.44.222-.868 0-.429-.115-.656-.221-.868-.093-.183-.179-.354-.179-.632 0-.33.121-.6.23-.842.09-.198.17-.378.17-.558 0-.4-.4-.8-.8-.8H18c-.844 0-1.488-.44-1.844-.938-.355-.497-.508-1.062-.453-1.859.007-.105.02-.22.035-.357.043-.401.106-.977.106-1.946 0-.867-.263-1.923-1.563-1.923-.148 0-.281.054-.281.223 0 .9 0 1.9-.2 2.8-.2 1.1-.6 2.2-1.6 3.2-.6.6-1.5 1-2.3 1.3-.45.15-1.239.3-1.9.408V18.3l1.5.5c.05 0 .1.025.15.05.05.025.1.05.15.05 1.5.6 2.9 1.1 5.2 1.1h4.2zM6 10H4v9h2v-9z"></path></svg>
+	</div>
+	<p data-ui-upvote-count="true" class="jsx-4156682952">
+		3
+	</p>
+</div>
+<div data-css-7dab2f="">
+	<svg aria-label="thumb up icon" viewbox="0 0 24 24" role="img"><path fill-rule="evenodd" d="M9.4 8.5c-.29.072-.788.197-1.42.298A1 1 0 007 8H3a1 1 0 00-1 1v11a1 1 0 001 1h4a1 1 0 00.927-.624c.52.162.811.262.873.324l.3.1c1.6.6 3.4 1.2 5.9 1.2h4.2c1.6 0 2.8-1.2 2.8-2.8v-.3c.3-.3 1-1 1-2.2 0-.7-.1-1.1-.3-1.5l.034-.1c.105-.306.266-.773.266-1.4 0-.627-.16-1.094-.266-1.4a11.768 11.768 0 01-.034-.1l.039-.113c.105-.305.261-.757.261-1.287C23 9.3 21.7 8 20.2 8h-2.035c-.349 0-.596-.352-.523-.693.148-.695.202-1.524.202-2.407 0-1.4-.382-2.145-1.047-2.884A3.11 3.11 0 0014.453.969c-1.422 0-2.375.125-2.375 1.547v.243c.004.73.009 1.869-.178 2.941-.2.9-.529 1.577-1.025 2.05-.261.249-.775.55-1.475.75zM19.2 20c.5 0 .8-.3.8-.8v-.4c0-.71.298-1.002.569-1.268.225-.22.431-.423.431-.832 0-.495-.121-.718-.23-.918-.09-.164-.17-.312-.17-.582 0-.278.086-.45.178-.632.107-.212.222-.44.222-.868 0-.429-.115-.656-.221-.868-.093-.183-.179-.354-.179-.632 0-.33.121-.6.23-.842.09-.198.17-.378.17-.558 0-.4-.4-.8-.8-.8H18c-.844 0-1.488-.44-1.844-.938-.355-.497-.508-1.062-.453-1.859.007-.105.02-.22.035-.357.043-.401.106-.977.106-1.946 0-.867-.263-1.923-1.563-1.923-.148 0-.281.054-.281.223 0 .9 0 1.9-.2 2.8-.2 1.1-.6 2.2-1.6 3.2-.6.6-1.5 1-2.3 1.3-.45.15-1.239.3-1.9.408V18.3l1.5.5c.05 0 .1.025.15.05.05.025.1.05.15.05 1.5.6 2.9 1.1 5.2 1.1h4.2zM6 10H4v9h2v-9z"></path></svg>
+</div>
+<svg aria-label="thumb up icon" viewbox="0 0 24 24" role="img"><path fill-rule="evenodd" d="M9.4 8.5c-.29.072-.788.197-1.42.298A1 1 0 007 8H3a1 1 0 00-1 1v11a1 1 0 001 1h4a1 1 0 00.927-.624c.52.162.811.262.873.324l.3.1c1.6.6 3.4 1.2 5.9 1.2h4.2c1.6 0 2.8-1.2 2.8-2.8v-.3c.3-.3 1-1 1-2.2 0-.7-.1-1.1-.3-1.5l.034-.1c.105-.306.266-.773.266-1.4 0-.627-.16-1.094-.266-1.4a11.768 11.768 0 01-.034-.1l.039-.113c.105-.305.261-.757.261-1.287C23 9.3 21.7 8 20.2 8h-2.035c-.349 0-.596-.352-.523-.693.148-.695.202-1.524.202-2.407 0-1.4-.382-2.145-1.047-2.884A3.11 3.11 0 0014.453.969c-1.422 0-2.375.125-2.375 1.547v.243c.004.73.009 1.869-.178 2.941-.2.9-.529 1.577-1.025 2.05-.261.249-.775.55-1.475.75zM19.2 20c.5 0 .8-.3.8-.8v-.4c0-.71.298-1.002.569-1.268.225-.22.431-.423.431-.832 0-.495-.121-.718-.23-.918-.09-.164-.17-.312-.17-.582 0-.278.086-.45.178-.632.107-.212.222-.44.222-.868 0-.429-.115-.656-.221-.868-.093-.183-.179-.354-.179-.632 0-.33.121-.6.23-.842.09-.198.17-.378.17-.558 0-.4-.4-.8-.8-.8H18c-.844 0-1.488-.44-1.844-.938-.355-.497-.508-1.062-.453-1.859.007-.105.02-.22.035-.357.043-.401.106-.977.106-1.946 0-.867-.263-1.923-1.563-1.923-.148 0-.281.054-.281.223 0 .9 0 1.9-.2 2.8-.2 1.1-.6 2.2-1.6 3.2-.6.6-1.5 1-2.3 1.3-.45.15-1.239.3-1.9.408V18.3l1.5.5c.05 0 .1.025.15.05.05.025.1.05.15.05 1.5.6 2.9 1.1 5.2 1.1h4.2zM6 10H4v9h2v-9z"></path></svg> 
+<div data-css-7dab2f="">
+	<svg aria-label="thumb up icon" viewbox="0 0 24 24" role="img"><path fill-rule="evenodd" d="M9.4 8.5c-.29.072-.788.197-1.42.298A1 1 0 007 8H3a1 1 0 00-1 1v11a1 1 0 001 1h4a1 1 0 00.927-.624c.52.162.811.262.873.324l.3.1c1.6.6 3.4 1.2 5.9 1.2h4.2c1.6 0 2.8-1.2 2.8-2.8v-.3c.3-.3 1-1 1-2.2 0-.7-.1-1.1-.3-1.5l.034-.1c.105-.306.266-.773.266-1.4 0-.627-.16-1.094-.266-1.4a11.768 11.768 0 01-.034-.1l.039-.113c.105-.305.261-.757.261-1.287C23 9.3 21.7 8 20.2 8h-2.035c-.349 0-.596-.352-.523-.693.148-.695.202-1.524.202-2.407 0-1.4-.382-2.145-1.047-2.884A3.11 3.11 0 0014.453.969c-1.422 0-2.375.125-2.375 1.547v.243c.004.73.009 1.869-.178 2.941-.2.9-.529 1.577-1.025 2.05-.261.249-.775.55-1.475.75zM19.2 20c.5 0 .8-.3.8-.8v-.4c0-.71.298-1.002.569-1.268.225-.22.431-.423.431-.832 0-.495-.121-.718-.23-.918-.09-.164-.17-.312-.17-.582 0-.278.086-.45.178-.632.107-.212.222-.44.222-.868 0-.429-.115-.656-.221-.868-.093-.183-.179-.354-.179-.632 0-.33.121-.6.23-.842.09-.198.17-.378.17-.558 0-.4-.4-.8-.8-.8H18c-.844 0-1.488-.44-1.844-.938-.355-.497-.508-1.062-.453-1.859.007-.105.02-.22.035-.357.043-.401.106-.977.106-1.946 0-.867-.263-1.923-1.563-1.923-.148 0-.281.054-.281.223 0 .9 0 1.9-.2 2.8-.2 1.1-.6 2.2-1.6 3.2-.6.6-1.5 1-2.3 1.3-.45.15-1.239.3-1.9.408V18.3l1.5.5c.05 0 .1.025.15.05.05.025.1.05.15.05 1.5.6 2.9 1.1 5.2 1.1h4.2zM6 10H4v9h2v-9z"></path></svg>
+</div>
+<p data-ui-upvote-count="true" class="jsx-4156682952">
+	3
+</p>
+<div class="jsx-4156682952 inner">
+	<div data-css-7dab2f="">
+		<svg aria-label="thumb up icon" viewbox="0 0 24 24" role="img"><path fill-rule="evenodd" d="M9.4 8.5c-.29.072-.788.197-1.42.298A1 1 0 007 8H3a1 1 0 00-1 1v11a1 1 0 001 1h4a1 1 0 00.927-.624c.52.162.811.262.873.324l.3.1c1.6.6 3.4 1.2 5.9 1.2h4.2c1.6 0 2.8-1.2 2.8-2.8v-.3c.3-.3 1-1 1-2.2 0-.7-.1-1.1-.3-1.5l.034-.1c.105-.306.266-.773.266-1.4 0-.627-.16-1.094-.266-1.4a11.768 11.768 0 01-.034-.1l.039-.113c.105-.305.261-.757.261-1.287C23 9.3 21.7 8 20.2 8h-2.035c-.349 0-.596-.352-.523-.693.148-.695.202-1.524.202-2.407 0-1.4-.382-2.145-1.047-2.884A3.11 3.11 0 0014.453.969c-1.422 0-2.375.125-2.375 1.547v.243c.004.73.009 1.869-.178 2.941-.2.9-.529 1.577-1.025 2.05-.261.249-.775.55-1.475.75zM19.2 20c.5 0 .8-.3.8-.8v-.4c0-.71.298-1.002.569-1.268.225-.22.431-.423.431-.832 0-.495-.121-.718-.23-.918-.09-.164-.17-.312-.17-.582 0-.278.086-.45.178-.632.107-.212.222-.44.222-.868 0-.429-.115-.656-.221-.868-.093-.183-.179-.354-.179-.632 0-.33.121-.6.23-.842.09-.198.17-.378.17-.558 0-.4-.4-.8-.8-.8H18c-.844 0-1.488-.44-1.844-.938-.355-.497-.508-1.062-.453-1.859.007-.105.02-.22.035-.357.043-.401.106-.977.106-1.946 0-.867-.263-1.923-1.563-1.923-.148 0-.281.054-.281.223 0 .9 0 1.9-.2 2.8-.2 1.1-.6 2.2-1.6 3.2-.6.6-1.5 1-2.3 1.3-.45.15-1.239.3-1.9.408V18.3l1.5.5c.05 0 .1.025.15.05.05.025.1.05.15.05 1.5.6 2.9 1.1 5.2 1.1h4.2zM6 10H4v9h2v-9z"></path></svg>
+	</div>
+	<p data-ui-upvote-count="true" class="jsx-4156682952">
+		3
+	</p>
+</div>
+<div data-ui-upvote="true" class="jsx-4156682952 root non-mobile-upvote">
+	<div class="jsx-4156682952 inner">
+		<div data-css-7dab2f="">
+			<svg aria-label="thumb up icon" viewbox="0 0 24 24" role="img"><path fill-rule="evenodd" d="M9.4 8.5c-.29.072-.788.197-1.42.298A1 1 0 007 8H3a1 1 0 00-1 1v11a1 1 0 001 1h4a1 1 0 00.927-.624c.52.162.811.262.873.324l.3.1c1.6.6 3.4 1.2 5.9 1.2h4.2c1.6 0 2.8-1.2 2.8-2.8v-.3c.3-.3 1-1 1-2.2 0-.7-.1-1.1-.3-1.5l.034-.1c.105-.306.266-.773.266-1.4 0-.627-.16-1.094-.266-1.4a11.768 11.768 0 01-.034-.1l.039-.113c.105-.305.261-.757.261-1.287C23 9.3 21.7 8 20.2 8h-2.035c-.349 0-.596-.352-.523-.693.148-.695.202-1.524.202-2.407 0-1.4-.382-2.145-1.047-2.884A3.11 3.11 0 0014.453.969c-1.422 0-2.375.125-2.375 1.547v.243c.004.73.009 1.869-.178 2.941-.2.9-.529 1.577-1.025 2.05-.261.249-.775.55-1.475.75zM19.2 20c.5 0 .8-.3.8-.8v-.4c0-.71.298-1.002.569-1.268.225-.22.431-.423.431-.832 0-.495-.121-.718-.23-.918-.09-.164-.17-.312-.17-.582 0-.278.086-.45.178-.632.107-.212.222-.44.222-.868 0-.429-.115-.656-.221-.868-.093-.183-.179-.354-.179-.632 0-.33.121-.6.23-.842.09-.198.17-.378.17-.558 0-.4-.4-.8-.8-.8H18c-.844 0-1.488-.44-1.844-.938-.355-.497-.508-1.062-.453-1.859.007-.105.02-.22.035-.357.043-.401.106-.977.106-1.946 0-.867-.263-1.923-1.563-1.923-.148 0-.281.054-.281.223 0 .9 0 1.9-.2 2.8-.2 1.1-.6 2.2-1.6 3.2-.6.6-1.5 1-2.3 1.3-.45.15-1.239.3-1.9.408V18.3l1.5.5c.05 0 .1.025.15.05.05.025.1.05.15.05 1.5.6 2.9 1.1 5.2 1.1h4.2zM6 10H4v9h2v-9z"></path></svg>
+		</div>
+		<p data-ui-upvote-count="true" class="jsx-4156682952">
+			3
+		</p>
+	</div>
+</div>
+<div class="sticky sticky-upvote">
+	<div data-ui-upvote="true" class="jsx-4156682952 root non-mobile-upvote">
+		<div class="jsx-4156682952 inner">
+			<div data-css-7dab2f="">
+				<svg aria-label="thumb up icon" viewbox="0 0 24 24" role="img"><path fill-rule="evenodd" d="M9.4 8.5c-.29.072-.788.197-1.42.298A1 1 0 007 8H3a1 1 0 00-1 1v11a1 1 0 001 1h4a1 1 0 00.927-.624c.52.162.811.262.873.324l.3.1c1.6.6 3.4 1.2 5.9 1.2h4.2c1.6 0 2.8-1.2 2.8-2.8v-.3c.3-.3 1-1 1-2.2 0-.7-.1-1.1-.3-1.5l.034-.1c.105-.306.266-.773.266-1.4 0-.627-.16-1.094-.266-1.4a11.768 11.768 0 01-.034-.1l.039-.113c.105-.305.261-.757.261-1.287C23 9.3 21.7 8 20.2 8h-2.035c-.349 0-.596-.352-.523-.693.148-.695.202-1.524.202-2.407 0-1.4-.382-2.145-1.047-2.884A3.11 3.11 0 0014.453.969c-1.422 0-2.375.125-2.375 1.547v.243c.004.73.009 1.869-.178 2.941-.2.9-.529 1.577-1.025 2.05-.261.249-.775.55-1.475.75zM19.2 20c.5 0 .8-.3.8-.8v-.4c0-.71.298-1.002.569-1.268.225-.22.431-.423.431-.832 0-.495-.121-.718-.23-.918-.09-.164-.17-.312-.17-.582 0-.278.086-.45.178-.632.107-.212.222-.44.222-.868 0-.429-.115-.656-.221-.868-.093-.183-.179-.354-.179-.632 0-.33.121-.6.23-.842.09-.198.17-.378.17-.558 0-.4-.4-.8-.8-.8H18c-.844 0-1.488-.44-1.844-.938-.355-.497-.508-1.062-.453-1.859.007-.105.02-.22.035-.357.043-.401.106-.977.106-1.946 0-.867-.263-1.923-1.563-1.923-.148 0-.281.054-.281.223 0 .9 0 1.9-.2 2.8-.2 1.1-.6 2.2-1.6 3.2-.6.6-1.5 1-2.3 1.3-.45.15-1.239.3-1.9.408V18.3l1.5.5c.05 0 .1.025.15.05.05.025.1.05.15.05 1.5.6 2.9 1.1 5.2 1.1h4.2zM6 10H4v9h2v-9z"></path></svg>
+			</div>
+			<p data-ui-upvote-count="true" class="jsx-4156682952">
+				3
+			</p>
+		</div>
+	</div>
+</div>
+<div class="jsx-2744003040 sticky-upvote-positioner">
+	<div class="sticky sticky-upvote">
+		<div data-ui-upvote="true" class="jsx-4156682952 root non-mobile-upvote">
+			<div class="jsx-4156682952 inner">
+				<div data-css-7dab2f="">
+					<svg aria-label="thumb up icon" viewbox="0 0 24 24" role="img"><path fill-rule="evenodd" d="M9.4 8.5c-.29.072-.788.197-1.42.298A1 1 0 007 8H3a1 1 0 00-1 1v11a1 1 0 001 1h4a1 1 0 00.927-.624c.52.162.811.262.873.324l.3.1c1.6.6 3.4 1.2 5.9 1.2h4.2c1.6 0 2.8-1.2 2.8-2.8v-.3c.3-.3 1-1 1-2.2 0-.7-.1-1.1-.3-1.5l.034-.1c.105-.306.266-.773.266-1.4 0-.627-.16-1.094-.266-1.4a11.768 11.768 0 01-.034-.1l.039-.113c.105-.305.261-.757.261-1.287C23 9.3 21.7 8 20.2 8h-2.035c-.349 0-.596-.352-.523-.693.148-.695.202-1.524.202-2.407 0-1.4-.382-2.145-1.047-2.884A3.11 3.11 0 0014.453.969c-1.422 0-2.375.125-2.375 1.547v.243c.004.73.009 1.869-.178 2.941-.2.9-.529 1.577-1.025 2.05-.261.249-.775.55-1.475.75zM19.2 20c.5 0 .8-.3.8-.8v-.4c0-.71.298-1.002.569-1.268.225-.22.431-.423.431-.832 0-.495-.121-.718-.23-.918-.09-.164-.17-.312-.17-.582 0-.278.086-.45.178-.632.107-.212.222-.44.222-.868 0-.429-.115-.656-.221-.868-.093-.183-.179-.354-.179-.632 0-.33.121-.6.23-.842.09-.198.17-.378.17-.558 0-.4-.4-.8-.8-.8H18c-.844 0-1.488-.44-1.844-.938-.355-.497-.508-1.062-.453-1.859.007-.105.02-.22.035-.357.043-.401.106-.977.106-1.946 0-.867-.263-1.923-1.563-1.923-.148 0-.281.054-.281.223 0 .9 0 1.9-.2 2.8-.2 1.1-.6 2.2-1.6 3.2-.6.6-1.5 1-2.3 1.3-.45.15-1.239.3-1.9.408V18.3l1.5.5c.05 0 .1.025.15.05.05.025.1.05.15.05 1.5.6 2.9 1.1 5.2 1.1h4.2zM6 10H4v9h2v-9z"></path></svg>
+				</div>
+				<p data-ui-upvote-count="true" class="jsx-4156682952">
+					3
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="jsx-629224323 right-column body-right-column">
+	<div class="jsx-2407523658 root guide-section">
+		<div id="module-introduction" data-module-id="introduction" class="jsx-3962230383">
+			<div id="module-introduction-anchor" class="jsx-3962230383 anchor">
+			</div>
+			<h2 data-css-19qk6p4="">
+				Introduction
+			</h2>
+			<div class="jsx-3796526469">
+				<div>
+					<div>
+						<p>
+							React.js's state management approach allows systematic implementation of a wide variety of user experiences. One such user experience technique is telling the user that something is happening or is loading in the background when a button is clicked. To achieve this, we'd like to have a boolean state value that governs the visibility of user interface components. That is, if the state value is <span class="jsx-3120878690"><code data-css-wz0v65="">true</code></span> then the components are disabled. Otherwise, the components are disabled. That same value can also be used to determine if a section of the app will display a loading message or any visual component for that matter.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="jsx-2407523658 root guide-section">
+		<div id="module-definingthestatevalue" data-module-id="definingthestatevalue" class="jsx-3962230383">
+			<div id="module-definingthestatevalue-anchor" class="jsx-3962230383 anchor">
+			</div>
+			<h2 data-css-19qk6p4="">
+				Defining the State Value
+			</h2>
+			<div class="jsx-3796526469">
+				<div>
+					<div>
+						<p>
+							Supposed you're creating a <span class="jsx-3120878690"><code data-css-wz0v65="">SearchComponent</code></span> that contains two major input elements:
+						</p>
+					</div>
+				</div>
+				<ul>
+					<div>
+						<div>
+							<li>A text input where users can type in a search query</li>
+						</div>
+					</div>
+					<div>
+						<div>
+							<li>A submit button that is a call to action to start searching</li>
+						</div>
+					</div>
+				</ul>
+				<div>
+					<div>
+						<p>
+							You'll then control the <span class="jsx-3120878690"><code data-css-wz0v65="">disabled</code></span> attribute of these two elements with an <span class="jsx-3120878690"><code data-css-wz0v65="">isDisabled</code></span> boolean state.
+						</p>
+					</div>
+				</div>
+				<h3 data-css-1nsv70o="">
+					Establishing State
+				</h3>
+				<div>
+					<div>
+						<p>
+							In your component's constructor, go ahead and define the <span class="jsx-3120878690"><code data-css-wz0v65="">isDisabled</code></span> state with an initial value of <span class="jsx-3120878690"><code data-css-wz0v65="">false</code></span>. This tells the user that they are free to input stuff in the text input and click the submit button.
+						</p>
+					</div>
+				</div>
+				<div>
+					<div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="jsx-1296640189 root">
+						<pre style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1.7142857142857142rem;margin:.5em 0;overflow:auto;background:#1E2429;border-radius:0.14285714285714285rem;padding-left:0;overflow-wrap:normal"><code style="color:rgba(255, 255, 255, 0.65);font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:right;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#0D0F12;float:left;padding:1.7142857142857142rem;margin:-1.7142857142857142rem 1.7142857142857142rem -1.7142857142857142rem 0"><span class="react-syntax-highlighter-line-number">1
+						</span><span class="react-syntax-highlighter-line-number">2
+						</span><span class="react-syntax-highlighter-line-number">3
+						</span><span class="react-syntax-highlighter-line-number">4
+						</span><span class="react-syntax-highlighter-line-number">5
+						</span><span class="react-syntax-highlighter-line-number">6
+						</span><span class="react-syntax-highlighter-line-number">7
+						</span><span class="react-syntax-highlighter-line-number">8
+						</span><span class="react-syntax-highlighter-line-number">9
+						</span><span class="react-syntax-highlighter-line-number">10
+						</span><span class="react-syntax-highlighter-line-number">11
+						</span></code><code style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="token module" style="color:#F26D6D">import</span> <span class="token maybe-class-name">React</span> <span class="token module" style="color:#F26D6D">from</span> <span class="token" style="color:#B8CC7A">'react'</span><span class="token" style="color:#F2F2F2">;</span>
+
+						<span class="token module" style="color:#F26D6D">export</span> <span class="token module" style="color:#F26D6D">default</span> <span class="token" style="color:#F26D6D">class</span> <span class="token class-name">SearchComponent</span> <span class="token" style="color:#F26D6D">extends</span> <span class="token class-name">React<span class="token" style="color:#F2F2F2">.</span>Component</span> <span class="token" style="color:#F2F2F2">{</span>
+  <span class="token" style="color:#8AC7E6">constructor</span><span class="token" style="color:#F2F2F2">(</span><span class="token parameter">props</span><span class="token" style="color:#F2F2F2">)</span> <span class="token" style="color:#F2F2F2">{</span>
+    <span class="token" style="color:#F26D6D">super</span><span class="token" style="color:#F2F2F2">(</span>props<span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">;</span>
+
+    <span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">state</span> <span class="token" style="color:#F2F2F2">=</span> <span class="token" style="color:#F2F2F2">{</span>
+      isDisabled<span class="token" style="color:#F2F2F2">:</span> <span class="token" style="color:#FF9466">false</span>
+    <span class="token" style="color:#F2F2F2">}</span>
+  <span class="token" style="color:#F2F2F2">}</span>
+						<span class="token" style="color:#F2F2F2">}</span></code>
+						</pre>
+						<div itemprop="programmingLanguage" class="jsx-1296640189 language">
+							javascript
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="jsx-2407523658 root guide-section">
+		<div id="module-bindingstatetoui" data-module-id="bindingstatetoui" class="jsx-3962230383">
+			<div id="module-bindingstatetoui-anchor" class="jsx-3962230383 anchor">
+			</div>
+			<h2 data-css-19qk6p4="">
+				Binding State to UI
+			</h2>
+			<div class="jsx-3796526469">
+				<div>
+					<div>
+						<p>
+							Create your component's <span class="jsx-3120878690"><code data-css-wz0v65="">render()</code></span> method that returns the form itself with the two UI elements. Copy the following function and paste it within the <span class="jsx-3120878690"><code data-css-wz0v65="">SearchComponent</code></span>. In practice, it's usually found as the last method of a React.js component.
+						</p>
+					</div>
+				</div>
+				<div>
+					<div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="jsx-1296640189 root">
+						<pre style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1.7142857142857142rem;margin:.5em 0;overflow:auto;background:#1E2429;border-radius:0.14285714285714285rem;padding-left:0;overflow-wrap:normal"><code style="color:rgba(255, 255, 255, 0.65);font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:right;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#0D0F12;float:left;padding:1.7142857142857142rem;margin:-1.7142857142857142rem 1.7142857142857142rem -1.7142857142857142rem 0"><span class="react-syntax-highlighter-line-number">1
+						</span><span class="react-syntax-highlighter-line-number">2
+						</span><span class="react-syntax-highlighter-line-number">3
+						</span><span class="react-syntax-highlighter-line-number">4
+						</span><span class="react-syntax-highlighter-line-number">5
+						</span><span class="react-syntax-highlighter-line-number">6
+						</span><span class="react-syntax-highlighter-line-number">7
+						</span><span class="react-syntax-highlighter-line-number">8
+						</span><span class="react-syntax-highlighter-line-number">9
+						</span><span class="react-syntax-highlighter-line-number">10
+						</span></code><code style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="token" style="color:#8AC7E6">render</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">)</span> <span class="token" style="color:#F2F2F2">{</span>
+  <span class="token" style="color:#F26D6D">return</span> <span class="token" style="color:#F2F2F2">(</span>
+    <span class="token" style="color:#F2F2F2">&lt;</span>div<span class="token" style="color:#F2F2F2">&gt;</span>
+      <span class="token" style="color:#F2F2F2">&lt;</span>input type<span class="token" style="color:#F2F2F2">=</span><span class="token" style="color:#B8CC7A">"text"</span> disabled<span class="token" style="color:#F2F2F2">=</span><span class="token" style="color:#F2F2F2">{</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">state</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">isDisabled</span><span class="token" style="color:#F2F2F2">}</span> <span class="token" style="color:#F2F2F2">/</span><span class="token" style="color:#F2F2F2">&gt;</span>
+      <span class="token" style="color:#F2F2F2">&lt;</span>button disabled<span class="token" style="color:#F2F2F2">=</span><span class="token" style="color:#F2F2F2">{</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">state</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">isDisabled</span><span class="token" style="color:#F2F2F2">}</span><span class="token" style="color:#F2F2F2">&gt;</span>
+        <span class="token maybe-class-name">Submit</span> <span class="token maybe-class-name">Query</span>
+      <span class="token" style="color:#F2F2F2">&lt;</span><span class="token" style="color:#F2F2F2">/</span>button<span class="token" style="color:#F2F2F2">&gt;</span>
+    <span class="token" style="color:#F2F2F2">&lt;</span><span class="token" style="color:#F2F2F2">/</span>div<span class="token" style="color:#F2F2F2">&gt;</span>
+  <span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">;</span>
+						<span class="token" style="color:#F2F2F2">}</span></code>
+						</pre>
+						<div itemprop="programmingLanguage" class="jsx-1296640189 language">
+							javascript
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>
+							Embed the value of <span class="jsx-3120878690"><code data-css-wz0v65="">this.state.isDisabled</code></span> as a value of the <span class="jsx-3120878690"><code data-css-wz0v65="">disabled</code></span> attribute via JSX as wrapped by <span class="jsx-3120878690"><code data-css-wz0v65="">{}</code></span>. Since its initial value is <span class="jsx-3120878690"><code data-css-wz0v65="">false</code></span>, users can then proceed to input text in it.
+						</p>
+					</div>
+				</div>
+				<div>
+					<div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="jsx-1296640189 root">
+						<pre style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1.7142857142857142rem;margin:.5em 0;overflow:auto;background:#1E2429;border-radius:0.14285714285714285rem;padding-left:0;overflow-wrap:normal"><code style="color:rgba(255, 255, 255, 0.65);font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:right;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#0D0F12;float:left;padding:1.7142857142857142rem;margin:-1.7142857142857142rem 1.7142857142857142rem -1.7142857142857142rem 0"><span class="react-syntax-highlighter-line-number">1
+						</span></code><code style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="token" style="color:#D99077"><span class="token" style="color:#D99077"><span class="token" style="color:#F2F2F2">&lt;</span>input</span> <span class="token" style="color:#F2F2F2">type</span><span class="token" style="color:#a5c261"><span class="token" style="color:#F2F2F2">=</span><span class="token" style="color:#F2F2F2">"</span>text<span class="token" style="color:#F2F2F2">"</span></span> <span class="token" style="color:#F2F2F2">disabled</span><span class="token script language-javascript"><span class="token script-punctuation" style="color:#F2F2F2">=</span><span class="token" style="color:#F2F2F2">{</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">state</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">isDisabled</span><span class="token" style="color:#F2F2F2">}</span></span> <span class="token" style="color:#F2F2F2">/&gt;</span></span></code>
+						</pre>
+						<div itemprop="programmingLanguage" class="jsx-1296640189 language">
+							jsx
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>
+							The same goes for the button for submitting a query.
+						</p>
+					</div>
+				</div>
+				<div>
+					<div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="jsx-1296640189 root">
+						<pre style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1.7142857142857142rem;margin:.5em 0;overflow:auto;background:#1E2429;border-radius:0.14285714285714285rem;padding-left:0;overflow-wrap:normal"><code style="color:rgba(255, 255, 255, 0.65);font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:right;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#0D0F12;float:left;padding:1.7142857142857142rem;margin:-1.7142857142857142rem 1.7142857142857142rem -1.7142857142857142rem 0"><span class="react-syntax-highlighter-line-number">1
+						</span><span class="react-syntax-highlighter-line-number">2
+						</span><span class="react-syntax-highlighter-line-number">3
+						</span></code><code style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="token" style="color:#D99077"><span class="token" style="color:#D99077"><span class="token" style="color:#F2F2F2">&lt;</span>button</span> <span class="token" style="color:#F2F2F2">disabled</span><span class="token script language-javascript"><span class="token script-punctuation" style="color:#F2F2F2">=</span><span class="token" style="color:#F2F2F2">{</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">state</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">isDisabled</span><span class="token" style="color:#F2F2F2">}</span></span><span class="token" style="color:#F2F2F2">&gt;</span></span><span class="token plain-text">
+  Submit Query
+						</span><span class="token" style="color:#D99077"><span class="token" style="color:#D99077"><span class="token" style="color:#F2F2F2">&lt;/</span>button</span><span class="token" style="color:#F2F2F2">&gt;</span></span></code>
+						</pre>
+						<div itemprop="programmingLanguage" class="jsx-1296640189 language">
+							jsx
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="jsx-2407523658 root guide-section">
+		<div id="module-disablingtheinterface" data-module-id="disablingtheinterface" class="jsx-3962230383">
+			<div id="module-disablingtheinterface-anchor" class="jsx-3962230383 anchor">
+			</div>
+			<h2 data-css-19qk6p4="">
+				Disabling the Interface
+			</h2>
+			<div class="jsx-3796526469">
+				<div>
+					<div>
+						<p>
+							The next thing you have to do is to bind a function that will update the state value of a component by calling <span class="jsx-3120878690"><code data-css-wz0v65="">this.setState()</code></span>, where <span class="jsx-3120878690"><code data-css-wz0v65="">this</code></span> is a reference to the instance of the React.js component. Remember that in React.js, a call to <span class="jsx-3120878690"><code data-css-wz0v65="">this.setState()</code></span> will force a re-render of the component with the newly updated values. The function will look like the following:
+						</p>
+					</div>
+				</div>
+				<div>
+					<div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="jsx-1296640189 root">
+						<pre style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1.7142857142857142rem;margin:.5em 0;overflow:auto;background:#1E2429;border-radius:0.14285714285714285rem;padding-left:0;overflow-wrap:normal"><code style="color:rgba(255, 255, 255, 0.65);font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:right;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#0D0F12;float:left;padding:1.7142857142857142rem;margin:-1.7142857142857142rem 1.7142857142857142rem -1.7142857142857142rem 0"><span class="react-syntax-highlighter-line-number">1
+						</span><span class="react-syntax-highlighter-line-number">2
+						</span><span class="react-syntax-highlighter-line-number">3
+						</span><span class="react-syntax-highlighter-line-number">4
+						</span><span class="react-syntax-highlighter-line-number">5
+						</span></code><code style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="token" style="color:#8AC7E6">handleSubmitClicked</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">)</span> <span class="token" style="color:#F2F2F2">{</span>
+  <span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">setState</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">{</span>
+    isDisabled<span class="token" style="color:#F2F2F2">:</span> <span class="token" style="color:#FF9466">true</span>
+  <span class="token" style="color:#F2F2F2">}</span><span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">;</span>
+						<span class="token" style="color:#F2F2F2">}</span></code>
+						</pre>
+						<div itemprop="programmingLanguage" class="jsx-1296640189 language">
+							javascript
+						</div>
+					</div>
+				</div>
+				<h3 data-css-1nsv70o="">
+					Binding to an Event
+				</h3>
+				<div>
+					<div>
+						<p>
+							Given your event handler, you'll bind the function to your button's <span class="jsx-3120878690"><code data-css-wz0v65="">onClick</code></span> attribute:
+						</p>
+					</div>
+				</div>
+				<div>
+					<div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="jsx-1296640189 root">
+						<pre style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1.7142857142857142rem;margin:.5em 0;overflow:auto;background:#1E2429;border-radius:0.14285714285714285rem;padding-left:0;overflow-wrap:normal"><code style="color:rgba(255, 255, 255, 0.65);font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:right;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#0D0F12;float:left;padding:1.7142857142857142rem;margin:-1.7142857142857142rem 1.7142857142857142rem -1.7142857142857142rem 0"><span class="react-syntax-highlighter-line-number">1
+						</span><span class="react-syntax-highlighter-line-number">2
+						</span><span class="react-syntax-highlighter-line-number">3
+						</span><span class="react-syntax-highlighter-line-number">4
+						</span><span class="react-syntax-highlighter-line-number">5
+						</span><span class="react-syntax-highlighter-line-number">6
+						</span></code><code style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="token" style="color:#D99077"><span class="token" style="color:#D99077"><span class="token" style="color:#F2F2F2">&lt;</span>button</span> 
+  <span class="token" style="color:#F2F2F2">disabled</span><span class="token script language-javascript"><span class="token script-punctuation" style="color:#F2F2F2">=</span><span class="token" style="color:#F2F2F2">{</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">state</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">isDisabled</span><span class="token" style="color:#F2F2F2">}</span></span>
+  <span class="token" style="color:#F2F2F2">onClick</span><span class="token script language-javascript"><span class="token script-punctuation" style="color:#F2F2F2">=</span><span class="token" style="color:#F2F2F2">{</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">handleSubmitClicked</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">bind</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">}</span></span>
+						<span class="token" style="color:#F2F2F2">&gt;</span></span><span class="token plain-text">
+  Submit Query
+						</span><span class="token" style="color:#D99077"><span class="token" style="color:#D99077"><span class="token" style="color:#F2F2F2">&lt;/</span>button</span><span class="token" style="color:#F2F2F2">&gt;</span></span></code>
+						</pre>
+						<div itemprop="programmingLanguage" class="jsx-1296640189 language">
+							jsx
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>
+							Invoke the <span class="jsx-3120878690"><code data-css-wz0v65="">.bind(this)</code></span> function in order to retain the value for <span class="jsx-3120878690"><code data-css-wz0v65="">this</code></span>, which is a reference to the instance of the component. This way (pun not intended), the <span class="jsx-3120878690"><code data-css-wz0v65="">this</code></span> inside the logic of <span class="jsx-3120878690"><code data-css-wz0v65="">handleSubmitClicked()</code></span> will always retain the value of the component's instance, thus allowing the <span class="jsx-3120878690"><code data-css-wz0v65="">setState()</code></span> to be called from it.
+						</p>
+					</div>
+				</div>
+				<h3 data-css-1nsv70o="">
+					Cascading Effect
+				</h3>
+				<div>
+					<div>
+						<p>
+							Since <span class="jsx-3120878690"><code data-css-wz0v65="">handlSubmitClicked()</code></span> updates the state of <span class="jsx-3120878690"><code data-css-wz0v65="">isDisabled</code></span> to <span class="jsx-3120878690"><code data-css-wz0v65="">true</code></span>, it will force a call to the <span class="jsx-3120878690"><code data-css-wz0v65="">render()</code></span> method of the component, causing the input elements' <span class="jsx-3120878690"><code data-css-wz0v65="">disabled</code></span> attribute to have a value of <span class="jsx-3120878690"><code data-css-wz0v65="">true</code></span>. As a result, this will create an effect that tells the user that something is happening after the button was clicked.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="jsx-2407523658 root guide-section">
+		<div id="module-reenablingtheinterface" data-module-id="reenablingtheinterface" class="jsx-3962230383">
+			<div id="module-reenablingtheinterface-anchor" class="jsx-3962230383 anchor">
+			</div>
+			<h2 data-css-19qk6p4="">
+				Re-enabling the Interface
+			</h2>
+			<div class="jsx-3796526469">
+				<div>
+					<div>
+						<p>
+							Once the process is finished, you can tell the user that they're free to input or modify the current text field. Do this by creating another event handler function that does the opposite—that is, it enables the UI components:
+						</p>
+					</div>
+				</div>
+				<div>
+					<div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="jsx-1296640189 root">
+						<pre style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1.7142857142857142rem;margin:.5em 0;overflow:auto;background:#1E2429;border-radius:0.14285714285714285rem;padding-left:0;overflow-wrap:normal"><code style="color:rgba(255, 255, 255, 0.65);font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:right;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#0D0F12;float:left;padding:1.7142857142857142rem;margin:-1.7142857142857142rem 1.7142857142857142rem -1.7142857142857142rem 0"><span class="react-syntax-highlighter-line-number">1
+						</span><span class="react-syntax-highlighter-line-number">2
+						</span><span class="react-syntax-highlighter-line-number">3
+						</span><span class="react-syntax-highlighter-line-number">4
+						</span><span class="react-syntax-highlighter-line-number">5
+						</span></code><code style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="token" style="color:#8AC7E6">enableComponents</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">)</span> <span class="token" style="color:#F2F2F2">{</span>
+  <span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">setState</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">{</span>
+    isDisabled<span class="token" style="color:#F2F2F2">:</span> <span class="token" style="color:#FF9466">false</span>
+  <span class="token" style="color:#F2F2F2">}</span><span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">;</span>
+						<span class="token" style="color:#F2F2F2">}</span></code>
+						</pre>
+						<div itemprop="programmingLanguage" class="jsx-1296640189 language">
+							javascript
+						</div>
+					</div>
+				</div>
+				<h3 data-css-1nsv70o="">
+					Simulating a Process
+				</h3>
+				<div>
+					<div>
+						<p>
+							To simulate that "something is happening," add code in the <span class="jsx-3120878690"><code data-css-wz0v65="">handleSubmitClicked()</code></span> that waits three seconds before firing a function which in turn will call <span class="jsx-3120878690"><code data-css-wz0v65="">enableComponents()</code></span>.
+						</p>
+					</div>
+				</div>
+				<div>
+					<div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="jsx-1296640189 root">
+						<pre style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1.7142857142857142rem;margin:.5em 0;overflow:auto;background:#1E2429;border-radius:0.14285714285714285rem;padding-left:0;overflow-wrap:normal"><code style="color:rgba(255, 255, 255, 0.65);font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:right;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#0D0F12;float:left;padding:1.7142857142857142rem;margin:-1.7142857142857142rem 1.7142857142857142rem -1.7142857142857142rem 0"><span class="react-syntax-highlighter-line-number">1
+						</span><span class="react-syntax-highlighter-line-number">2
+						</span><span class="react-syntax-highlighter-line-number">3
+						</span><span class="react-syntax-highlighter-line-number">4
+						</span><span class="react-syntax-highlighter-line-number">5
+						</span><span class="react-syntax-highlighter-line-number">6
+						</span><span class="react-syntax-highlighter-line-number">7
+						</span><span class="react-syntax-highlighter-line-number">8
+						</span><span class="react-syntax-highlighter-line-number">9
+						</span><span class="react-syntax-highlighter-line-number">10
+						</span><span class="react-syntax-highlighter-line-number">11
+						</span><span class="react-syntax-highlighter-line-number">12
+						</span></code><code style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="token" style="color:#8AC7E6">handleSubmitClicked</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">)</span> <span class="token" style="color:#F2F2F2">{</span>
+  <span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">setState</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">{</span>
+    isDisabled<span class="token" style="color:#F2F2F2">:</span> <span class="token" style="color:#FF9466">true</span>
+  <span class="token" style="color:#F2F2F2">}</span><span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">;</span>
+
+  <span class="token" style="color:#8AC7E6">setTimeout</span><span class="token" style="color:#F2F2F2">(</span>
+    <span class="token" style="color:#F26D6D">function</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">)</span> <span class="token" style="color:#F2F2F2">{</span>
+      <span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">enableComponents</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">)</span>
+    <span class="token" style="color:#F2F2F2">}</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">bind</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">,</span>
+    <span class="token" style="color:#FF9466">3000</span>
+  <span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">;</span>
+						<span class="token" style="color:#F2F2F2">}</span></code>
+						</pre>
+						<div itemprop="programmingLanguage" class="jsx-1296640189 language">
+							javascript
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>
+							Notice that you'll call <span class="jsx-3120878690"><code data-css-wz0v65="">.bind(this)</code></span> once again against the function that is the first argument to <span class="jsx-3120878690"><code data-css-wz0v65="">setTimeout()</code></span>. This will allow <span class="jsx-3120878690"><code data-css-wz0v65="">this</code></span> to retain its value as the reference to the instance of this component, allowing a call to be made to <span class="jsx-3120878690"><code data-css-wz0v65="">enableComponents()</code></span>. Normally, this timeout code will be replaced by actual processing of the user input, which will eventually call <span class="jsx-3120878690"><code data-css-wz0v65="">enableComponents()</code></span> once done.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="jsx-2407523658 root guide-section">
+		<div id="module-overallcode" data-module-id="overallcode" class="jsx-3962230383">
+			<div id="module-overallcode-anchor" class="jsx-3962230383 anchor">
+			</div>
+			<h2 data-css-19qk6p4="">
+				Overall Code
+			</h2>
+			<div class="jsx-3796526469">
+				<div>
+					<div>
+						<p>
+							Your final component form will look like the following:
+						</p>
+					</div>
+				</div>
+				<div>
+					<div itemscope="" itemtype="http://schema.org/SoftwareSourceCode" class="jsx-1296640189 root">
+						<pre style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:1.7142857142857142rem;margin:.5em 0;overflow:auto;background:#1E2429;border-radius:0.14285714285714285rem;padding-left:0;overflow-wrap:normal"><code style="color:rgba(255, 255, 255, 0.65);font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:right;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;background:#0D0F12;float:left;padding:1.7142857142857142rem;margin:-1.7142857142857142rem 1.7142857142857142rem -1.7142857142857142rem 0"><span class="react-syntax-highlighter-line-number">1
+						</span><span class="react-syntax-highlighter-line-number">2
+						</span><span class="react-syntax-highlighter-line-number">3
+						</span><span class="react-syntax-highlighter-line-number">4
+						</span><span class="react-syntax-highlighter-line-number">5
+						</span><span class="react-syntax-highlighter-line-number">6
+						</span><span class="react-syntax-highlighter-line-number">7
+						</span><span class="react-syntax-highlighter-line-number">8
+						</span><span class="react-syntax-highlighter-line-number">9
+						</span><span class="react-syntax-highlighter-line-number">10
+						</span><span class="react-syntax-highlighter-line-number">11
+						</span><span class="react-syntax-highlighter-line-number">12
+						</span><span class="react-syntax-highlighter-line-number">13
+						</span><span class="react-syntax-highlighter-line-number">14
+						</span><span class="react-syntax-highlighter-line-number">15
+						</span><span class="react-syntax-highlighter-line-number">16
+						</span><span class="react-syntax-highlighter-line-number">17
+						</span><span class="react-syntax-highlighter-line-number">18
+						</span><span class="react-syntax-highlighter-line-number">19
+						</span><span class="react-syntax-highlighter-line-number">20
+						</span><span class="react-syntax-highlighter-line-number">21
+						</span><span class="react-syntax-highlighter-line-number">22
+						</span><span class="react-syntax-highlighter-line-number">23
+						</span><span class="react-syntax-highlighter-line-number">24
+						</span><span class="react-syntax-highlighter-line-number">25
+						</span><span class="react-syntax-highlighter-line-number">26
+						</span><span class="react-syntax-highlighter-line-number">27
+						</span><span class="react-syntax-highlighter-line-number">28
+						</span><span class="react-syntax-highlighter-line-number">29
+						</span><span class="react-syntax-highlighter-line-number">30
+						</span><span class="react-syntax-highlighter-line-number">31
+						</span><span class="react-syntax-highlighter-line-number">32
+						</span><span class="react-syntax-highlighter-line-number">33
+						</span><span class="react-syntax-highlighter-line-number">34
+						</span><span class="react-syntax-highlighter-line-number">35
+						</span><span class="react-syntax-highlighter-line-number">36
+						</span><span class="react-syntax-highlighter-line-number">37
+						</span><span class="react-syntax-highlighter-line-number">38
+						</span><span class="react-syntax-highlighter-line-number">39
+						</span><span class="react-syntax-highlighter-line-number">40
+						</span><span class="react-syntax-highlighter-line-number">41
+						</span><span class="react-syntax-highlighter-line-number">42
+						</span><span class="react-syntax-highlighter-line-number">43
+						</span><span class="react-syntax-highlighter-line-number">44
+						</span></code><code style="color:#F2F2F2;font-family:monospace, Consolas, Monaco, 'Andale Mono';direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"><span class="token module" style="color:#F26D6D">import</span> <span class="token maybe-class-name">React</span> <span class="token module" style="color:#F26D6D">from</span> <span class="token" style="color:#B8CC7A">'react'</span><span class="token" style="color:#F2F2F2">;</span>
+
+						<span class="token module" style="color:#F26D6D">export</span> <span class="token module" style="color:#F26D6D">default</span> <span class="token" style="color:#F26D6D">class</span> <span class="token class-name">SearchComponent</span> <span class="token" style="color:#F26D6D">extends</span> <span class="token class-name">React<span class="token" style="color:#F2F2F2">.</span>Component</span> <span class="token" style="color:#F2F2F2">{</span>
+  <span class="token" style="color:#8AC7E6">constructor</span><span class="token" style="color:#F2F2F2">(</span><span class="token parameter">props</span><span class="token" style="color:#F2F2F2">)</span> <span class="token" style="color:#F2F2F2">{</span>
+    <span class="token" style="color:#F26D6D">super</span><span class="token" style="color:#F2F2F2">(</span>props<span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">;</span>
+
+    <span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">state</span> <span class="token" style="color:#F2F2F2">=</span> <span class="token" style="color:#F2F2F2">{</span>
+      isDisabled<span class="token" style="color:#F2F2F2">:</span> <span class="token" style="color:#FF9466">false</span>
+    <span class="token" style="color:#F2F2F2">}</span>
+  <span class="token" style="color:#F2F2F2">}</span>
+
+  <span class="token" style="color:#8AC7E6">handleSubmitClicked</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">)</span> <span class="token" style="color:#F2F2F2">{</span>
+    <span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">setState</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">{</span>
+      isDisabled<span class="token" style="color:#F2F2F2">:</span> <span class="token" style="color:#FF9466">true</span>
+    <span class="token" style="color:#F2F2F2">}</span><span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">;</span>
+
+    <span class="token" style="color:#8AC7E6">setTimeout</span><span class="token" style="color:#F2F2F2">(</span>
+      <span class="token" style="color:#F26D6D">function</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">)</span> <span class="token" style="color:#F2F2F2">{</span>
+        <span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">enableComponents</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">)</span>
+      <span class="token" style="color:#F2F2F2">}</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">bind</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">,</span>
+      <span class="token" style="color:#FF9466">3000</span>
+    <span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">;</span>
+  <span class="token" style="color:#F2F2F2">}</span>
+
+  <span class="token" style="color:#8AC7E6">enableComponents</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">)</span> <span class="token" style="color:#F2F2F2">{</span>
+    <span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">setState</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">{</span>
+      isDisabled<span class="token" style="color:#F2F2F2">:</span> <span class="token" style="color:#FF9466">false</span>
+    <span class="token" style="color:#F2F2F2">}</span><span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">;</span>
+  <span class="token" style="color:#F2F2F2">}</span>
+
+  <span class="token" style="color:#8AC7E6">render</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F2F2F2">)</span> <span class="token" style="color:#F2F2F2">{</span>
+    <span class="token" style="color:#F26D6D">return</span> <span class="token" style="color:#F2F2F2">(</span>
+      <span class="token" style="color:#F2F2F2">&lt;</span>div<span class="token" style="color:#F2F2F2">&gt;</span>
+        <span class="token" style="color:#F2F2F2">&lt;</span>input type<span class="token" style="color:#F2F2F2">=</span><span class="token" style="color:#B8CC7A">"text"</span> disabled<span class="token" style="color:#F2F2F2">=</span><span class="token" style="color:#F2F2F2">{</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">state</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">isDisabled</span><span class="token" style="color:#F2F2F2">}</span> <span class="token" style="color:#F2F2F2">/</span><span class="token" style="color:#F2F2F2">&gt;</span>
+        <span class="token" style="color:#F2F2F2">&lt;</span>button 
+          disabled<span class="token" style="color:#F2F2F2">=</span><span class="token" style="color:#F2F2F2">{</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">state</span><span class="token" style="color:#F2F2F2">.</span><span class="token property-access">isDisabled</span><span class="token" style="color:#F2F2F2">}</span>
+          onClick<span class="token" style="color:#F2F2F2">=</span><span class="token" style="color:#F2F2F2">{</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">handleSubmitClicked</span><span class="token" style="color:#F2F2F2">.</span><span class="token method property-access" style="color:#8AC7E6">bind</span><span class="token" style="color:#F2F2F2">(</span><span class="token" style="color:#F26D6D">this</span><span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">}</span>
+        <span class="token" style="color:#F2F2F2">&gt;</span>
+          <span class="token maybe-class-name">Submit</span> <span class="token maybe-class-name">Query</span>
+        <span class="token" style="color:#F2F2F2">&lt;</span><span class="token" style="color:#F2F2F2">/</span>button<span class="token" style="color:#F2F2F2">&gt;</span>
+      <span class="token" style="color:#F2F2F2">&lt;</span><span class="token" style="color:#F2F2F2">/</span>div<span class="token" style="color:#F2F2F2">&gt;</span>
+    <span class="token" style="color:#F2F2F2">)</span><span class="token" style="color:#F2F2F2">;</span>
+  <span class="token" style="color:#F2F2F2">}</span>
+						<span class="token" style="color:#F2F2F2">}</span></code>
+						</pre>
+						<div itemprop="programmingLanguage" class="jsx-1296640189 language">
+							javascript
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>
+							Try this component out and notice that upon clicking <strong>Submit Query</strong>, both the input and button elements will disable, and after three seconds will be enabled again.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="jsx-2407523658 root guide-section">
+		<div id="module-conclusion" data-module-id="conclusion" class="jsx-3962230383">
+			<div id="module-conclusion-anchor" class="jsx-3962230383 anchor">
+			</div>
+			<h2 data-css-19qk6p4="">
+				Conclusion
+			</h2>
+			<div class="jsx-3796526469">
+				<div>
+					<div>
+						<p>
+							This guide demonstrated a simple way to communicate to a user that something is happening after clicking a button by maintaining a boolean state variable that serves as a value for the visibility of the UI. Try to see if you can incorporate this technique to your own stateful React component by having a single state variable govern the accessibility of your interface. Some suggestions are:
+						</p>
+					</div>
+				</div>
+				<ol>
+					<div>
+						<div>
+							<li>Using the state variable to make a loading text or visualization appear if the value is <span class="jsx-3120878690"><code data-css-wz0v65="">true</code></span>. Otherwise, hide the text or visualization.</li>
+						</div>
+					</div>
+					<div>
+						<div>
+							<li>Invoking <span class="jsx-3120878690"><code data-css-wz0v65="">enableComponents()</code></span> after a successful AJAX call within <span class="jsx-3120878690"><code data-css-wz0v65="">handleSubmitClicked()</code></span></li>
+						</div>
+					</div>
+				</ol>
+			</div>
+		</div>
+	</div>
+	<div class="jsx-2744003040 sticky-upvote-positioner">
+		<div class="sticky sticky-upvote">
+			<div data-ui-upvote="true" class="jsx-4156682952 root non-mobile-upvote">
+				<div class="jsx-4156682952 inner">
+					<div data-css-7dab2f="">
+						<svg aria-label="thumb up icon" viewbox="0 0 24 24" role="img"><path fill-rule="evenodd" d="M9.4 8.5c-.29.072-.788.197-1.42.298A1 1 0 007 8H3a1 1 0 00-1 1v11a1 1 0 001 1h4a1 1 0 00.927-.624c.52.162.811.262.873.324l.3.1c1.6.6 3.4 1.2 5.9 1.2h4.2c1.6 0 2.8-1.2 2.8-2.8v-.3c.3-.3 1-1 1-2.2 0-.7-.1-1.1-.3-1.5l.034-.1c.105-.306.266-.773.266-1.4 0-.627-.16-1.094-.266-1.4a11.768 11.768 0 01-.034-.1l.039-.113c.105-.305.261-.757.261-1.287C23 9.3 21.7 8 20.2 8h-2.035c-.349 0-.596-.352-.523-.693.148-.695.202-1.524.202-2.407 0-1.4-.382-2.145-1.047-2.884A3.11 3.11 0 0014.453.969c-1.422 0-2.375.125-2.375 1.547v.243c.004.73.009 1.869-.178 2.941-.2.9-.529 1.577-1.025 2.05-.261.249-.775.55-1.475.75zM19.2 20c.5 0 .8-.3.8-.8v-.4c0-.71.298-1.002.569-1.268.225-.22.431-.423.431-.832 0-.495-.121-.718-.23-.918-.09-.164-.17-.312-.17-.582 0-.278.086-.45.178-.632.107-.212.222-.44.222-.868 0-.429-.115-.656-.221-.868-.093-.183-.179-.354-.179-.632 0-.33.121-.6.23-.842.09-.198.17-.378.17-.558 0-.4-.4-.8-.8-.8H18c-.844 0-1.488-.44-1.844-.938-.355-.497-.508-1.062-.453-1.859.007-.105.02-.22.035-.357.043-.401.106-.977.106-1.946 0-.867-.263-1.923-1.563-1.923-.148 0-.281.054-.281.223 0 .9 0 1.9-.2 2.8-.2 1.1-.6 2.2-1.6 3.2-.6.6-1.5 1-2.3 1.3-.45.15-1.239.3-1.9.408V18.3l1.5.5c.05 0 .1.025.15.05.05.025.1.05.15.05 1.5.6 2.9 1.1 5.2 1.1h4.2zM6 10H4v9h2v-9z"></path></svg>
+					</div>
+					<p data-ui-upvote-count="true" class="jsx-4156682952">
+						3
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
