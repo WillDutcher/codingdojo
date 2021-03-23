@@ -1,16 +1,16 @@
 node_modules/
 **/React/
 !**/React/Zipped/
-./MERN/'Full Stack MERN'/'Boat Project'/client/node_modules/
-./MERN/'Full Stack MERN'/'Boat Project'/server/node_modules/
-./MERN/'Full Stack MERN'/myNewProject/node_modules/
-./MERN/'Full Stack MERN'/myNewProject/client/node_modules/
-./MERN/'Full Stack MERN'/ProductManager/node_modules/
-./MERN/'Full Stack MERN'/ProductManager/client/node_modules/
-./MERN/'Full Stack MERN'/Paper and Cards/
-./MERN/'Full Stack MERN'/PetShelterExam/
-./MERN/'Full Stack MERN'/codingDojoAuthors
-./MERN/'Full Stack MERN'/practice_teamManager
-./MERN/'Full Stack MERN'/Zipped/dutcher_will_mern_full_stack_mern_pet_shelter_exam.zip
-*/MERN/'Full Stack MERN'/TolmanSkiffs/
-./Projects_and_Algorithms/Projects/
+MERN/'Full Stack MERN'/'Boat Project'/client/node_modules/
+MERN/'Full Stack MERN'/'Boat Project'/server/node_modules/
+MERN/'Full Stack MERN'/myNewProject/node_modules/
+MERN/'Full Stack MERN'/myNewProject/client/node_modules/
+MERN/'Full Stack MERN'/ProductManager/node_modules/
+MERN/'Full Stack MERN'/ProductManager/client/node_modules/
+MERN/'Full Stack MERN'/Paper and Cards/
+MERN/'Full Stack MERN'/PetShelterExam/
+MERN/'Full Stack MERN'/codingDojoAuthors
+MERN/'Full Stack MERN'/practice_teamManager
+MERN/'Full Stack MERN'/Zipped/dutcher_will_mern_full_stack_mern_pet_shelter_exam.zip
+MERN/'Full Stack MERN'/TolmanSkiffs/
+Projects_and_Algorithms/Projects/
