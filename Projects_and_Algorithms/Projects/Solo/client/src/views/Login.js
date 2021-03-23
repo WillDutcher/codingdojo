@@ -19,8 +19,8 @@ const Login = (props) => {
             withCredentials: true
         })
         .then((res) => {
+            Cookies.set('userLoginToken', res.data.userLogged.hasAccount)
             console.log(res.data);
-            alert("You have successfully logged in!");
             navigate('/menu/order');
         })
         .catch((err) => {

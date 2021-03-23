@@ -21,15 +21,23 @@ const Header = () => {
         })
     }, [])
 
-    const getLoggedInUser = () => {
-        axios.get('http://localhost:8000/api/user/loggedin', {withCredentials: true})
-            .then((res) => {
-                console.log(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            })
+    const checkForToken = () => {
+        if (Cookies.get('userLoginToken') === 'true') {
+            return true;
+        } else {
+            return false;
+        }
     }
+
+    // const getLoggedInUser = () => {
+    //     axios.get('http://localhost:8000/api/user/loggedin', {withCredentials: true})
+    //         .then((res) => {
+    //             console.log(res.data);
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         })
+    // }
 
     const logout = (e) => {
         e.preventDefault();
@@ -55,11 +63,11 @@ const Header = () => {
                 <h3>Paolo's Pizzaria</h3>
                 <h6>123 Main St | 555-999-1234</h6>
             </div>
-            {/* <h6 className="d-block align-self-center text-right w-25">Login Stuff</h6> */}
             <nav className="w-25">
                 <ul className="d-flex list-unstyled justify-content-between">
-                    {/* <li>Home</li> */}
-                    {/* <li>Order ({ order })</li> */}
+                    <Link to={ '/' }>Home</Link>
+                    <li>Order (0)</li>
+                    <li>Account</li>
                     {/* <li>Account</li> */}
                     {/* {
                         (user) ?
@@ -68,9 +76,12 @@ const Header = () => {
                     } */}
                     {/* <Link to={ '/user/reg'}>Register</Link>
                     <Link to={ '/user/login'}>Log In</Link> */}
-                    <Link to={ '/user/login'}>Log In</Link>
-                    <Link to={ '/user/reg'}>Register</Link>
-                    <Link onClick={ (e) => logout(e) } to={ '/' }>Log Out</Link>
+                    {/* <Link onClick={ (e) => logout(e) } to={ '/' }>Log Out</Link> */}
+                    {
+                        (checkForToken()) ?
+                            <Link onClick={ (e) => logout(e) } to={ '/' }>Log Out</Link>
+                            : <Link to={ '/user/login'}>Log In</Link>
+                    }
                     {/* {
                         (hasAccount && loggedIn) ?
                             // <li>Logout</li>
@@ -81,7 +92,7 @@ const Header = () => {
                                 : <li>Register</li>
                     } */}
                 </ul>
-                <button onClick={ getLoggedInUser }>Check Logged In User</button>
+                <Link to={ '/user/reg' }>Don't have an account? Register now!</Link>
             </nav>
         </div>
     );

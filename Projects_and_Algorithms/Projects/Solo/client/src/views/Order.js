@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { navigate } from '@reach/router';
 import OrderForm from '../components/OrderForm';
-import Cookies from 'js-cookie';
 
 const Order = (props) => {
     const [ errors, setErrors ] = useState();
