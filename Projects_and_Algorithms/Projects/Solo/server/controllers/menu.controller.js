@@ -34,7 +34,7 @@ const create = (req, res) => {
         })
 };
 
-const getOne = (req, res) => {
+const getOne = async (req, res) => {
     // Get single menu item
     console.log(req.params.id);
     Menu.findById(req.params.id)

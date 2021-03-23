@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Cookies from 'js-cookie';
 
 const OrderForm = (props) => {
     const { initialSize, initialCrust, initialCheese, initialSauce,
@@ -155,7 +154,6 @@ const OrderForm = (props) => {
                                 onChange={ (e) => setSize(e.target.value) }
                                 value={ size }
                             >
-                                <option value="">-</option>
                                 <option value="Personal">Personal</option>
                                 <option value="Small">Small</option>
                                 <option value="Medium">Medium</option>
@@ -180,7 +178,6 @@ const OrderForm = (props) => {
                                 onChange={ (e) => setCrust(e.target.value) }
                                 value={ crust }
                             >
-                                <option value="">-</option>
                                 <option value="Normal">Normal</option>
                                 <option value="Thin">Thin</option>
                                 <option value="Pan">Pan</option>
@@ -204,7 +201,6 @@ const OrderForm = (props) => {
                                 onChange={ (e) => setSauce(e.target.value) }
                                 value={ sauce }
                             >
-                                <option value="">-</option>
                                 <option value="Light">Light</option>
                                 <option value="Normal">Normal</option>
                                 <option value="Extra">Extra</option>
@@ -228,7 +224,6 @@ const OrderForm = (props) => {
                                 onChange={ (e) => setCheese(e.target.value) }
                                 value={ cheese }
                             >
-                                <option value="">-</option>
                                 <option value="Light">Light</option>
                                 <option value="Normal">Normal</option>
                                 <option value="Extra">Extra</option>
