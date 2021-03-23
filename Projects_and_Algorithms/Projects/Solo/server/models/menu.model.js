@@ -100,6 +100,17 @@ const MenuSchema = new mongoose.Schema({
     drinks: {
         type: String,
         enum: [ '-', 'Coke', 'Diet Coke', 'Dr. Pepper', 'Diet Dr. Pepper', 'Sprite', 'Fanta Orange', 'Barq\'s Root Beer' ]
+    },
+    basePrice: {
+        type: Number,
+        default: 7
+    },
+    toppingPrice: {
+        type: Number,
+        default: 2
+    },
+    quantity: {
+        type: Number
     }
 }, { timestamps: true });
 

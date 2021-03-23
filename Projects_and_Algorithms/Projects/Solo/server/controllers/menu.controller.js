@@ -1,133 +1,34 @@
-const Menu = require('../models/menu.model');
+const Cheese = require("../models/Cheese");
+const Crust = require("../models/Crust");
+const Size = require("../models/Size");
+const Sauce = require("../models/Sauce");
+const Topping = require("../models/Topping");
+const Side = require("../models/Side");
+const Dessert = require("../models/Dessert");
+const Drink = require("../models/Drink");
 
-const index = (req, res) =>{
-    res.json({
-        // Simple test to ensure successful connection
-        message: "You have successfully connected!"
-    });
+const getAll = async (req, res) => {
+  // Get all menu items
+  const cheeses = await Cheese.find();
+  const crusts = await Crust.find();
+  const sizes = await Size.find();
+  const sauces = await Sauce.find();
+  const toppings = await Topping.find();
+  const sides = await Side.find();
+  const desserts = await Dessert.find();
+  const drinks = await Drink.find();
+  res.send({
+    cheeses,
+    crusts,
+    sizes,
+    sauces,
+    toppings,
+    sides,
+    desserts,
+    drinks,
+  });
 };
 
-const getAll = (req, res) => {
-    // Get all
-    Menu.find()
-        .then((allOrders) => {
-            console.log(allOrders);
-            res.json(allOrders);
-        })
-        .catch((err) => {
-            console.log(`Error in getAll: ${ err }`);
-            res.status(400).json(err);
-        })
-}
-
-const create = (req, res) => {
-    // Create an order from menu
-    console.log(req.body);
-    Menu.create(req.body)
-        .then((newOrder) => {
-            console.log(newOrder);
-            res.json(newOrder);
-        })
-        .catch((err) => {
-            console.log(`Error in newOrder: ${ err }`);
-            res.status(400).json(err);
-        })
-};
-
-const getOne = (req, res) => {
-    // Get single menu item
-    console.log(req.params.id);
-    Menu.findById(req.params.id)
-        .then((singleOrder) => {
-            console.log(singleOrder);
-            res.json(singleOrder);
-        })
-        .catch((err) => {
-            console.log(`Error in getOrder: ${ err }`);
-            res.status(400).json(err);
-        })
-};
-
-const update = (req, res) => {
-    // update an order
-    console.log(req.params.id);
-    console.log(req.body);
-    Menu.findByIdAndUpdate(req.params.id, req.body, {
-        new: true,
-        runValidators: true
-    })
-        .then((updatedOrder) => {
-            console.log(updatedOrder);
-            res.json(updatedOrder);
-        })
-        .catch((err) => {
-            console.log(`Error in update: ${ err }`);
-            res.status(400).json(err);
-        })
-};
-
-const remove = (req, res) => {
-    // Delete an order
-    console.log(req.params.id);
-    Menu.findByIdAndRemove(req.params.id)
-        .then((removedOrder) => {
-            console.log(removedOrder);
-            res.json(removedOrder);
-        })
-        .catch((err) => {
-            console.log(`Error in deleteOrder: ${ err }`);
-            res.status(400).json(err);
-        })
-};
-
-const fave = (req, res) => {
-    let id = '6057df4e9494781344bc4221';
-    Menu.findById(id)
-    .then((faveOrder) => {
-            console.log(faveOrder);
-            res.json(faveOrder);
-        })
-        .catch((err) => {
-            console.log(`Error in getOrder: ${ err }`);
-            res.status(400).json(err);
-        })
-    // Load fave pizza
-    // const fave = {
-    //     pizza: {
-    //         size: "Large",
-    //         crust: "Pan",
-    //         cheese: "Extra",
-    //         sauce: "Normal",
-    //         toppings: {
-    //             protein: {
-    //                 "ham": true,
-    //             },
-    //             veggies: {
-    //                 "onion": true,
-    //                 "greenPepper": true
-    //             }
-    //         }
-    //     }
-    // }
-
-    // console.log(fave);
-    // Menu.create(fave)
-    //     .then((faveOrder) => {
-    //         console.log(faveOrder);
-    //         res.json(faveOrder);
-    //     })
-    //     .catch((err) => {
-    //         console.log(`Error in faveOrder: ${ err }`);
-    //         res.status(400).json(err);
-    //     })
-};
-
-module.exports= {
-    index,
-    getAll,
-    create,
-    getOne,
-    update,
-    remove,
-    fave
+module.exports = {
+  getAll,
 };
