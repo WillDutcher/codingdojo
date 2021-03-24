@@ -46,7 +46,7 @@ const Header = () => {
   };
 
   return (
-    <div className="header d-flex justify-content-between align-items-center">
+    <div className="header d-flex justify-content-between align-items-center pt-4">
       <Link to={"/"}>
         <img src={icon} alt="Logo for Paolo's Pizzaria" className="w-100" />
       </Link>

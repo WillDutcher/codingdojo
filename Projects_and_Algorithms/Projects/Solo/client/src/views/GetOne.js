@@ -27,7 +27,6 @@ const GetOne = (props) => {
   useEffect(() => {
     axios.get(`http://localhost:8000/api/menu/${id}`).then((res) => {
       const userOrder = res.data;
-      console.log("userOrder");
       console.log(userOrder);
       setUserOrder(userOrder);
     });
