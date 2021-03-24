@@ -12,11 +12,13 @@
 .header {
   min-height: 100px;
   color: #F36A6C;
+  margin-bottom: 30px;
 }
 
 li {
   text-decoration: none;
-  font-weight: 500;
+  list-style-type: none;
+  font-weight: 400;
 }
 
 /***************    CARD    ***************/
@@ -48,6 +50,26 @@ form {
   width: 600px;
   border-radius: 20px;
   margin-bottom: 30px;
+}
+
+form.registration label {
+  width: 150px;
+}
+
+form.registration select {
+  margin-left: 50px;
+  margin-right: 10px;
+  height: 29.31px;
+  width: 196.882px;
+  overflow: visble;
+  line-height: inherit;
+  padding: 1px 2px;
+  font: 400 13.3333px Arial;
+}
+
+.login-container {
+  margin: 20px;
+  padding: 20px 0;
 }
 
 h5 {
@@ -112,6 +134,15 @@ select#drinks {
 input {
   margin-left: 50px;
   margin-right: 10px;
+  padding-left: 10px;
+}
+
+#login-form input {
+  margin-left: 0px;
+}
+
+.login-btn {
+  width: 100px;
 }
 
 #pizza-details > *,
